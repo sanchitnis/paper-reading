@@ -8,7 +8,11 @@ pydantic>=2.5.0
 python-dotenv>=1.0.0
 rich>=13.0.0
 typer>=0.9.0
+click>=8.0.0
 matplotlib>=3.8.0
 pillow>=10.0.0
 pygments>=2.17.0
 jinja2>=3.1.2
+
+# Google NotebookLM Unofficial API & Automation (teng-lin/notebooklm-py)
+notebooklm-py>=0.8.6

@@ -76,9 +76,9 @@ Generates an Obsidian vault formatted to the gold-standard topology (as demonstr
 - `13 Glossary.md` & `14 References.md`: Alphabetical cross-linked definitions and bibliography.
 
 ### 3.2 Gemini Notebook & Multimedia Explainer Pipeline
-- **NotebookLM-Style Audio Overview Script (`AUDIO_OVERVIEW_SCRIPT.md`)**: A two-host podcast conversation featuring **Alex** (the skeptical systems engineer) and **Jordan** (the intuitive synthesizer) breaking down the paper with wit, depth, and clarity.
-- **Interactive Presentation Deck (`slides.html`)**: HTML5/SVG presentation with presenter notes, math blocks, and visual diagrams.
-- **Video Storyboard Frames (`video_frames/`)**: High-resolution visual frames generated automatically for video production.
+- **Dual-Engine Architecture**:
+  - **Local High-Fidelity Engine**: Generates 2-host audio overview scripts (`AUDIO_OVERVIEW_SCRIPT.md`), interactive HTML5 slides (`slides.html`), and rendered 16:9 video storyboard frames (`video_frames/`). Works 100% offline.
+  - **Live Cloud NotebookLM Bridge (via `notebooklm-py`)**: Deep programmatic integration with Google NotebookLM backend. Allows generating and downloading real `.mp4` explainer videos, `.m4a` audio podcasts, slide decks, and study mind-maps directly from your Google account.
 
 ### 3.3 Publication-Grade Technical Explainer Report (`EXPLAINER_REPORT.md`)
 - Executive summary with the core breakthrough distilled into 3 sentences.
@@ -144,13 +144,14 @@ The playbook is personalized via [`learner_profile.json`](learner_profile.json):
 
 ## 6. Agent Skills in `.agents/skills/`
 
-The system provides 6 production-grade agent skills:
+The system provides 7 production-grade agent skills:
 1. [`.agents/skills/paper-ingest`](.agents/skills/paper-ingest/SKILL.md): Ingests PDF, arXiv, HTML, and text papers into structured JSON.
 2. [`.agents/skills/multipass-reader`](.agents/skills/multipass-reader/SKILL.md): Orchestrates Pass 1, Pass 2, and Pass 3 reading gates.
 3. [`.agents/skills/concept-explainer`](.agents/skills/concept-explainer/SKILL.md): AI Chatbot tutor for Socratic and Feynman dialogue.
 4. [`.agents/skills/obsidian-vault-builder`](.agents/skills/obsidian-vault-builder/SKILL.md): Generates 15-note interconnected Obsidian vaults.
 5. [`.agents/skills/gemini-notebook-media`](.agents/skills/gemini-notebook-media/SKILL.md): Produces NotebookLM podcast scripts, slides, and video assets.
-6. [`.agents/skills/explainer-report-generator`](.agents/skills/explainer-report-generator/SKILL.md): Synthesizes comprehensive technical reports.
+6. [`.agents/skills/notebooklm`](.agents/skills/notebooklm/SKILL.md): Live Google NotebookLM automation via `teng-lin/notebooklm-py` to generate real cloud videos, podcasts, and study documents.
+7. [`.agents/skills/explainer-report-generator`](.agents/skills/explainer-report-generator/SKILL.md): Synthesizes comprehensive technical reports.
 
 Detailed system specifications are documented in [`agents.md`](agents.md).
 
@@ -168,6 +169,10 @@ python -m src.cli run-all "vp-vnp-vault/00 Index.md"
 
 # 3. Launch the interactive AI tutor
 python -m src.cli chat "vp-vnp-vault/00 Index.md"
+
+# 4. (Optional) Generate live cloud videos & podcasts via Google NotebookLM
+python -m src.cli notebooklm-auth --login
+python -m src.cli notebooklm-sync "papers/01_attention_is_all_you_need.md"
 ```
 
 For detailed instructions, see [`GETTING_STARTED.md`](GETTING_STARTED.md).

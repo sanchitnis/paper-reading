@@ -121,17 +121,20 @@ The system employs a **Pipeline & Supervisor Architecture**:
 ---
 
 ### 2.5 Agent 5: Gemini Notebook & Media Producer Agent (`GeminiMediaProducerAgent`)
-- **Associated Skill**: `.agents/skills/gemini-notebook-media/SKILL.md`
+- **Associated Skills**: 
+  - `.agents/skills/gemini-notebook-media/SKILL.md` (Local multimodal synthesis & presentation pipeline)
+  - `.agents/skills/notebooklm/SKILL.md` (Automated cloud integration via `teng-lin/notebooklm-py`)
 - **Primary Mission**: Generate multimodal learning artifacts modeled after Google NotebookLM and Gemini Audio/Video pipelines.
 
-#### Output Deliverables
-1. **Two-Host Deep-Dive Audio Podcast Script (`AUDIO_OVERVIEW_SCRIPT.md`)**:
-   - Dynamic dialogue between **Alex** (analytical, systems-minded engineer) and **Jordan** (intuitive conceptual synthesizer).
-   - Explores motivation, breakthrough intuition, mathematical nuance, and unverified caveats with high energy and conversational flow.
-2. **Interactive Explainer Slides (`slides.html`)**:
-   - Clean, modern presentation deck featuring core formulas, comparisons, and boundary warnings.
-3. **Visual Storyboard & Frame Renderer (`video_frames/`)**:
-   - High-resolution SVG/PNG slide frames generated via Matplotlib and Pillow for automated video compilation.
+#### Dual-Engine Architecture
+1. **Local High-Fidelity Engine (`src/gemini/notebook_api.py`)**:
+   - Generates the complete 2-host audio overview script (`AUDIO_OVERVIEW_SCRIPT.md`), interactive HTML5 slides (`slides.html`), and rendered 16:9 video storyboard frames (`video_frames/`). Operates 100% offline without external credentials.
+2. **Live Cloud NotebookLM Bridge (`src/gemini/notebooklm_bridge.py`)**:
+   - Interfaces directly with Google's NotebookLM backend via `notebooklm-py`.
+   - Programmatically creates notebooks, uploads paper sources, and triggers Google's native artifact generators:
+     - Live Explainer Video & Cinematic Video (`.mp4`)
+     - Live Audio Overview Podcast (`.m4a`)
+     - Slide Decks, Quizzes, Flashcards, and Mind Maps (`.md` / `.json`)
 
 ---
 

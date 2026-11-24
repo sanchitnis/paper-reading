@@ -42,3 +42,25 @@ Creates visual presentation slides optimized for video explainer rendering:
 
 ## 3. Video Rendering Engine
 Outputs an interactive HTML5 presentation bundle (`slides.html`) and an automated video build script (`render_video.py`) that uses `matplotlib`, `PIL`, and Gemini audio/TTS outputs to produce an MP4 video or interactive web explainer.
+
+## 4. Live Google NotebookLM Integration (via `notebooklm-py`)
+When connected to Google NotebookLM via `notebooklm-py` (`notebooklm login`):
+- **Cloud Explainer Video Generation**:
+  ```bash
+  notebooklm generate video -n <notebook_id>
+  notebooklm generate cinematic-video -n <notebook_id>
+  notebooklm download video ./outputs/<paper_id>/explainer.mp4 -n <notebook_id>
+  ```
+- **Cloud Audio Overview Podcast (.m4a)**:
+  ```bash
+  notebooklm generate audio -n <notebook_id>
+  notebooklm download audio ./outputs/<paper_id>/podcast.m4a -n <notebook_id>
+  ```
+- **Study Documents & Presentation Decks**:
+  ```bash
+  notebooklm generate slide-deck -n <notebook_id>
+  notebooklm generate report -n <notebook_id>
+  notebooklm generate quiz -n <notebook_id>
+  notebooklm generate mind-map -n <notebook_id>
+  ```
+- **Python Bridge**: Use `src.gemini.notebooklm_bridge.NotebookLMBridge` for automated background orchestration.

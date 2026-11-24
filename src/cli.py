@@ -9,6 +9,7 @@ from src.vault.generator import ObsidianVaultGenerator
 from src.chatbot.tutor import PaperTutorChatbot
 from src.gemini.notebook_api import GeminiNotebookProducer
 from src.gemini.video_producer import VideoProducer
+from src.gemini.notebooklm_bridge import NotebookLMBridge
 
 def main():
     parser = argparse.ArgumentParser(
@@ -46,11 +47,45 @@ def main():
     chat_p = subparsers.add_parser("chat", help="Launch interactive AI Chatbot tutor")
     chat_p.add_argument("source", help="Paper path, arXiv ID, or text file")
 
+    # Command: notebooklm-auth
+    nlm_auth_p = subparsers.add_parser("notebooklm-auth", help="Check or perform NotebookLM authentication")
+    nlm_auth_p.add_argument("--login", action="store_true", help="Launch browser to log in to NotebookLM")
+
+    # Command: notebooklm-sync
+    nlm_sync_p = subparsers.add_parser("notebooklm-sync", help="Sync paper to live Google NotebookLM via notebooklm-py")
+    nlm_sync_p.add_argument("source", help="Paper path, arXiv ID, or text file")
+    nlm_sync_p.add_argument("--output-dir", default=str(config.output_dir), help="Output directory")
+
+    # Command: notebooklm-video
+    nlm_vid_p = subparsers.add_parser("notebooklm-video", help="Generate live NotebookLM video explainer")
+    nlm_vid_p.add_argument("source", help="Paper path, arXiv ID, or text file")
+    nlm_vid_p.add_argument("--format", choices=["video", "cinematic-video"], default="video", help="Video format")
+
+    # Command: notebooklm-doc
+    nlm_doc_p = subparsers.add_parser("notebooklm-doc", help="Generate live NotebookLM study documents (report, quiz, mind-map, slides)")
+    nlm_doc_p.add_argument("source", help="Paper path, arXiv ID, or text file")
+    nlm_doc_p.add_argument("--doc-type", choices=["report", "quiz", "flashcards", "mind-map", "slide-deck"], default="report", help="Document type")
+
     args = parser.parse_args()
 
     if not args.command:
         parser.print_help()
         sys.exit(0)
+
+    # Fast-path for NotebookLM Authentication check / login
+    if args.command == "notebooklm-auth":
+        bridge = NotebookLMBridge()
+        if getattr(args, "login", False):
+            import subprocess
+            print("[+] Launching NotebookLM browser authentication...")
+            subprocess.run(["notebooklm", "login"])
+        auth_status = bridge.check_auth()
+        if auth_status.get("authenticated"):
+            print("[✓] Authenticated with live Google NotebookLM! Ready to generate cloud artifacts.")
+        else:
+            print("[!] NotebookLM is currently not authenticated.")
+            print("    Run 'python -m src.cli notebooklm-auth --login' or 'notebooklm login' to sign in.")
+        return
 
     print(f"\n[+] Loading learner profile for: {config.learner_profile.get('name')} ({config.learner_profile.get('target_role')})")
     
@@ -109,6 +144,35 @@ def main():
         producer = GeminiNotebookProducer(out_dir, config.learner_profile)
         report_file = producer.generate_explainer_report(manifest, {"p1": p1, "p2": p2, "p3": p3})
         print(f"[✓] Technical Explainer Report generated: {report_file}")
+
+    # Live NotebookLM Cloud Integrations (via teng-lin/notebooklm-py)
+    if args.command == "notebooklm-sync":
+        out_dir = Path(getattr(args, "output_dir", config.output_dir)) / manifest.paper_id
+        bridge = NotebookLMBridge()
+        res = bridge.sync_paper_to_notebooklm(manifest, out_dir)
+        print(f"\n[✓] NotebookLM sync complete. Results: {json.dumps(res, indent=2)}")
+
+    if args.command == "notebooklm-video":
+        out_dir = Path(getattr(args, "output_dir", config.output_dir)) / manifest.paper_id
+        bridge = NotebookLMBridge()
+        nb_id = bridge.create_notebook(f"Video: {manifest.title[:40]}")
+        if nb_id:
+            bridge.add_source_and_wait(nb_id, manifest.file_path or str(out_dir / "paper_source.txt"))
+            video_fmt = getattr(args, "format", "video")
+            vid_out = out_dir / f"{manifest.paper_id}_{video_fmt}.mp4"
+            if bridge.generate_and_download_video(nb_id, vid_out, format=video_fmt):
+                print(f"[✓] Successfully downloaded NotebookLM video to: {vid_out}")
+
+    if args.command == "notebooklm-doc":
+        out_dir = Path(getattr(args, "output_dir", config.output_dir)) / manifest.paper_id
+        bridge = NotebookLMBridge()
+        doc_type = getattr(args, "doc_type", "report")
+        nb_id = bridge.create_notebook(f"Doc: {manifest.title[:40]}")
+        if nb_id:
+            bridge.add_source_and_wait(nb_id, manifest.file_path or str(out_dir / "paper_source.txt"))
+            doc_out = out_dir / f"{manifest.paper_id}_{doc_type}.md"
+            if bridge.generate_study_document(nb_id, doc_type, doc_out):
+                print(f"[✓] Successfully generated and downloaded NotebookLM {doc_type} to: {doc_out}")
 
     # Interactive Chatbot
     if args.command == "chat":

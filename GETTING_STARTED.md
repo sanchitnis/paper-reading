@@ -126,6 +126,30 @@ python -m src.cli chat "path/to/paper.pdf"
 - `/code` - Request a minimal runnable Python simulation of the concept.
 - `exit` - Exit the chat session.
 
+### Step 4.7: Live Google NotebookLM Cloud Generation (via `notebooklm-py`)
+To use live Google NotebookLM to generate real MP4 explainer videos, M4A podcasts, slide decks, and study guides:
+
+1. **Check or Sign In to NotebookLM**:
+   ```bash
+   python -m src.cli notebooklm-auth --login
+   # Or directly:
+   notebooklm login
+   ```
+2. **Sync Paper & Auto-Generate Cloud Artifacts**:
+   ```bash
+   python -m src.cli notebooklm-sync "papers/01_attention_is_all_you_need.md"
+   ```
+3. **Generate & Download Specific Live Artifacts**:
+   ```bash
+   # Generate and download a video explainer (.mp4)
+   python -m src.cli notebooklm-video "papers/01_attention_is_all_you_need.md"
+
+   # Generate a study report, quiz, or mind-map
+   python -m src.cli notebooklm-doc "papers/01_attention_is_all_you_need.md" --doc-type quiz
+   python -m src.cli notebooklm-doc "papers/01_attention_is_all_you_need.md" --doc-type mind-map
+   ```
+   Artifacts are downloaded directly into `outputs/<paper_id>/`.
+
 ---
 
 ## 5. Directory Structure Overview
