@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: 'en-US' }}">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ page.title | default: site.title }}</title>
+    <meta name="description" content="{{ page.description | default: site.description }}">
+    <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
+    
+    <!-- Custom Head Includes (Mermaid.js & MathJax) -->
+    {% include head-custom.html %}
+  </head>
+  <body>
+    <header class="page-header" role="banner">
+      <h1 class="project-name">{{ page.title | default: site.title }}</h1>
+      <h2 class="project-tagline">{{ page.description | default: site.description }}</h2>
+      <a href="https://github.com/sanchitnis/paper-reading" class="btn">View on GitHub</a>
+      <a href="{{ '/MASTER_EXPLAINER' | relative_url }}" class="btn">Master Explainer</a>
+      <a href="{{ '/papers/' | relative_url }}" class="btn">Papers Catalog</a>
+    </header>
+
+    <main id="content" class="main-content" role="main">
+      {{ content }}
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/sanchitnis/paper-reading">Paper Reading Playbook</a> is maintained by <a href="https://github.com/sanchitnis">sanchitnis</a>.</span>
+        <span class="site-footer-credits">Hosted on GitHub Pages with live Mermaid & MathJax rendering.</span>
+      </footer>
+    </main>
+  </body>
+</html>
