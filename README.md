@@ -96,7 +96,28 @@ Generates an Obsidian vault formatted to the gold-standard topology (as demonstr
 
 ---
 
-## 4. Persona & Learner Scaffolding
+## 4. The 10 Seminal Modern ML Papers
+
+The repository includes curated deconstructions, manifests, and pre-generated Obsidian vaults for the 10 foundational papers of modern AI in [`papers/`](file:///d:/sanjay/paper-reading/papers/):
+
+| # | Paper Title | Venue / Year | Core Breakthrough | Vault & Report |
+| :--- | :--- | :--- | :--- | :--- |
+| **01** | [Attention Is All You Need](papers/01_attention_is_all_you_need.md) | NeurIPS 2017 | Dispensed with recurrence/convolutions; introduced multi-head self-attention. | [Vault](file:///d:/sanjay/paper-reading/vaults/01_attention_is_all_you_need-vault/00%20Index.md) &bull; [Report](file:///d:/sanjay/paper-reading/outputs/01_attention_is_all_you_need/EXPLAINER_REPORT.md) |
+| **02** | [Deep Residual Learning (ResNet)](papers/02_deep_residual_learning_resnet.md) | CVPR 2016 | Overcame vanishing gradients via identity skip connections ($y = \mathcal{F}(x) + x$). | [Vault](file:///d:/sanjay/paper-reading/vaults/02_deep_residual_learning_resnet-vault/00%20Index.md) &bull; [Report](file:///d:/sanjay/paper-reading/outputs/02_deep_residual_learning_resnet/EXPLAINER_REPORT.md) |
+| **03** | [BERT: Bidirectional Transformers](papers/03_bert_bidirectional_transformers.md) | NAACL 2019 | Masked Language Modeling (MLM) and deep bidirectional pre-training. | [Vault](file:///d:/sanjay/paper-reading/vaults/03_bert_bidirectional_transformers-vault/00%20Index.md) &bull; [Report](file:///d:/sanjay/paper-reading/outputs/03_bert_bidirectional_transformers/EXPLAINER_REPORT.md) |
+| **04** | [GPT-3: Language Models are Few-Shot Learners](papers/04_gpt3_language_models_few_shot.md) | NeurIPS 2020 | 175B parameter scaling; unlocked in-context zero- and few-shot learning. | [Vault](file:///d:/sanjay/paper-reading/vaults/04_gpt3_language_models_few_shot-vault/00%20Index.md) &bull; [Report](file:///d:/sanjay/paper-reading/outputs/04_gpt3_language_models_few_shot/EXPLAINER_REPORT.md) |
+| **05** | [DDPM: Diffusion Probabilistic Models](papers/05_ddpm_diffusion_models.md) | NeurIPS 2020 | Variational diffusion with score matching, establishing modern visual generative AI. | [Vault](file:///d:/sanjay/paper-reading/vaults/05_ddpm_diffusion_models-vault/00%20Index.md) &bull; [Report](file:///d:/sanjay/paper-reading/outputs/05_ddpm_diffusion_models/EXPLAINER_REPORT.md) |
+| **06** | [Vision Transformer (ViT)](papers/06_vision_transformer_vit.md) | ICLR 2021 | Applied pure Transformer encoders to linear projections of image patches. | [Vault](file:///d:/sanjay/paper-reading/vaults/06_vision_transformer_vit-vault/00%20Index.md) &bull; [Report](file:///d:/sanjay/paper-reading/outputs/06_vision_transformer_vit/EXPLAINER_REPORT.md) |
+| **07** | [InstructGPT: RLHF Alignment](papers/07_instructgpt_rlhf.md) | NeurIPS 2022 | SFT + Reward Model + PPO alignment loop; direct predecessor to ChatGPT. | [Vault](file:///d:/sanjay/paper-reading/vaults/07_instructgpt_rlhf-vault/00%20Index.md) &bull; [Report](file:///d:/sanjay/paper-reading/outputs/07_instructgpt_rlhf/EXPLAINER_REPORT.md) |
+| **08** | [LoRA: Low-Rank Adaptation](papers/08_lora_low_rank_adaptation.md) | ICLR 2022 | Decomposed weight updates into low-rank matrices $BA$; slashed VRAM by 3x. | [Vault](file:///d:/sanjay/paper-reading/vaults/08_lora_low_rank_adaptation-vault/00%20Index.md) &bull; [Report](file:///d:/sanjay/paper-reading/outputs/08_lora_low_rank_adaptation/EXPLAINER_REPORT.md) |
+| **09** | [Scaling Laws for Neural Language Models](papers/09_scaling_laws_neural_language_models.md) | arXiv 2020 | Empirical power-law relationships governing compute ($C$), data ($D$), and parameters ($N$). | [Vault](file:///d:/sanjay/paper-reading/vaults/09_scaling_laws_neural_language_models-vault/00%20Index.md) &bull; [Report](file:///d:/sanjay/paper-reading/outputs/09_scaling_laws_neural_language_models/EXPLAINER_REPORT.md) |
+| **10** | [FlashAttention: IO-Aware Attention](papers/10_flashattention_io_aware.md) | NeurIPS 2022 | GPU SRAM tiling and online softmax; 2-4x speedup enabling long contexts. | [Vault](file:///d:/sanjay/paper-reading/vaults/10_flashattention_io_aware-vault/00%20Index.md) &bull; [Report](file:///d:/sanjay/paper-reading/outputs/10_flashattention_io_aware/EXPLAINER_REPORT.md) |
+
+Detailed catalog with mathematical summaries is available in [`papers/README.md`](file:///d:/sanjay/paper-reading/papers/README.md) and [`papers/catalog.json`](file:///d:/sanjay/paper-reading/papers/catalog.json).
+
+---
+
+## 5. Persona & Learner Scaffolding
 
 The playbook is personalized via [`learner_profile.json`](file:///d:/sanjay/paper-reading/learner_profile.json):
 
@@ -112,7 +133,7 @@ The playbook is personalized via [`learner_profile.json`](file:///d:/sanjay/pape
 
 ---
 
-## 5. Agent Skills in `.agents/skills/`
+## 6. Agent Skills in `.agents/skills/`
 
 The system provides 6 production-grade agent skills:
 1. [`.agents/skills/paper-ingest`](file:///d:/sanjay/paper-reading/.agents/skills/paper-ingest/SKILL.md): Ingests PDF, arXiv, HTML, and text papers into structured JSON.
@@ -126,7 +147,7 @@ Detailed system specifications are documented in [`agents.md`](file:///d:/sanjay
 
 ---
 
-## 6. Quick Start
+## 7. Quick Start
 
 To get started right away:
 ```bash
