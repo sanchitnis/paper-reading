@@ -5,12 +5,12 @@
     "authors": ["Ashish Vaswani", "Noam Shazeer", "Niki Parmar", "Jakob Uszkoreit", "Llion Jones", "Aidan N. Gomez", "Lukasz Kaiser", "Illia Polosukhin"],
     "year": 2017,
     "venue": "NeurIPS 2017",
+    "award": "Seminal Architecture Landmark",
     "arxiv_id": "1706.03762",
     "category": "Architecture & Attention",
     "significance": "Introduced the Transformer architecture based entirely on self-attention mechanisms, dispensing with recurrence and convolutions, forming the universal backbone of modern generative AI.",
     "core_equations": [
-      "\\text{Attention}(Q, K, V) = \\text{softmax}\\left(\\frac{QK^T}{\\sqrt{d_k}}\\right)V",
-      "\\text{MultiHead}(Q, K, V) = \\text{Concat}(\\text{head}_1, \\dots, \\text{head}_h)W^O"
+      "\\text{Attention}(Q, K, V) = \\text{softmax}\\left(\\frac{QK^T}{\\sqrt{d_k}}\\right)V"
     ]
   },
   {
@@ -18,7 +18,8 @@
     "title": "Deep Residual Learning for Image Recognition",
     "authors": ["Kaiming He", "Xiangyu Zhang", "Shaoqing Ren", "Jian Sun"],
     "year": 2015,
-    "venue": "CVPR 2016 (Best Paper)",
+    "venue": "CVPR 2016",
+    "award": "CVPR 2016 Best Paper Award",
     "arxiv_id": "1512.03385",
     "category": "Architecture & Optimization",
     "significance": "Introduced residual skip connections (identity shortcut mappings), overcoming the vanishing/exploding gradient barrier and enabling training of networks over 100-1000 layers deep.",
@@ -31,7 +32,8 @@
     "title": "BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding",
     "authors": ["Jacob Devlin", "Ming-Wei Chang", "Kenton Lee", "Kristina Toutanova"],
     "year": 2018,
-    "venue": "NAACL 2019 (Best Long Paper)",
+    "venue": "NAACL 2019",
+    "award": "NAACL 2019 Best Long Paper Award",
     "arxiv_id": "1810.04805",
     "category": "Pre-training & Representations",
     "significance": "Pioneered masked language modeling (MLM) and bidirectional representations with fine-tuning, revolutionizing natural language understanding benchmarks.",
@@ -45,6 +47,7 @@
     "authors": ["Tom B. Brown", "Benjamin Mann", "Nick Ryder", "Melanie Subbiah", "Jared Kaplan", "Prafulla Dhariwal", "Arvind Neelakantan", "Pranav Shyam", "Girish Sastry", "Amanda Askell", "et al."],
     "year": 2020,
     "venue": "NeurIPS 2020",
+    "award": "NeurIPS 2020 Outstanding Paper Award",
     "arxiv_id": "2005.14165",
     "category": "Foundational LLMs & In-Context Learning",
     "significance": "Demonstrated that scaling autoregressive language models to 175B parameters produces strong in-context few-shot capabilities without gradient updates or fine-tuning.",
@@ -58,11 +61,11 @@
     "authors": ["Jonathan Ho", "Ajay Jain", "Pieter Abbeel"],
     "year": 2020,
     "venue": "NeurIPS 2020",
+    "award": "Generative Modeling Landmark",
     "arxiv_id": "2006.11239",
     "category": "Generative Modeling & Diffusion",
-    "significance": "Formulated a tractable connection between score matching, Langevin dynamics, and variational inference in diffusion models, unlocking modern photorealistic generative AI (Stable Diffusion, Midjourney, Sora).",
+    "significance": "Formulated a tractable connection between score matching, Langevin dynamics, and variational inference in diffusion models, unlocking modern photorealistic generative AI.",
     "core_equations": [
-      "q(x_t \\mid x_{t-1}) = \\mathcal{N}(x_t; \\sqrt{1 - \\beta_t} x_{t-1}, \\beta_t I)",
       "L_{\\text{simple}}(\\theta) = \\mathbb{E}_{t, x_0, \\epsilon}\\left[\\|\\epsilon - \\epsilon_\\theta(\\sqrt{\\bar{\\alpha}_t}x_0 + \\sqrt{1 - \\bar{\\alpha}_t}\\epsilon, t)\\|^2\\right]"
     ]
   },
@@ -72,6 +75,7 @@
     "authors": ["Alexey Dosovitskiy", "Lucas Beyer", "Alexander Kolesnikov", "Dirk Weissenborn", "Xiaohua Zhai", "Thomas Unterthiner", "Mostafa Dehghani", "Matthias Minderer", "Georg Heigold", "Sylvain Gelly", "Jakob Uszkoreit", "Neil Houlsby"],
     "year": 2020,
     "venue": "ICLR 2021",
+    "award": "Vision Foundation Landmark",
     "arxiv_id": "2010.11929",
     "category": "Vision & Multimodal Architecture",
     "significance": "Demonstrated that standard Transformer encoders applied directly to linear projections of flattened image patches achieve SOTA performance on vision tasks, replacing inductive spatial convolutions when pre-trained on sufficient data.",
@@ -85,11 +89,12 @@
     "authors": ["Long Ouyang", "Jeffrey Wu", "Xu Jiang", "Diogo Almeida", "Carroll Wainwright", "Pamela Mishkin", "Chong Zhang", "Sandhini Agarwal", "Katarina Slama", "Alex Ray", "et al."],
     "year": 2022,
     "venue": "NeurIPS 2022",
+    "award": "Alignment Landmark (Basis of ChatGPT)",
     "arxiv_id": "2203.02155",
     "category": "Alignment & RLHF",
-    "significance": "Pioneered the modern 3-step alignment workflow (Supervised Fine-Tuning, Reward Modeling, and PPO Reinforcement Learning from Human Feedback), resolving the alignment tax and forming the direct basis for ChatGPT.",
+    "significance": "Pioneered the modern 3-step alignment workflow (Supervised Fine-Tuning, Reward Modeling, and PPO Reinforcement Learning from Human Feedback), resolving the alignment tax.",
     "core_equations": [
-      "\\text{obj}(\\phi) = \\mathbb{E}_{(x, y) \\sim D_{\\pi_{\\phi}^{\\text{RL}}}} \\left[r_\\theta(x, y) - \\beta D_{\\text{KL}}(\\pi_\\phi^{\\text{RL}}(y \\mid x) \\parallel \\pi^{\\text{SFT}}(y \\mid x))\\right] + \\gamma \\mathbb{E}_{x \\sim D_{\\text{pretrain}}}[\\log \\pi_\\phi^{\\text{RL}}(x)]"
+      "\\text{obj}(\\phi) = \\mathbb{E}_{(x, y) \\sim D_{\\pi_{\\phi}^{\\text{RL}}}} \\left[r_\\theta(x, y) - \\beta D_{\\text{KL}}(\\pi_\\phi^{\\text{RL}}(y \\mid x) \\parallel \\pi^{\\text{SFT}}(y \\mid x))\\right]"
     ]
   },
   {
@@ -98,11 +103,12 @@
     "authors": ["Edward J. Hu", "Yelong Shen", "Phillip Wallis", "Zeyuan Allen-Zhu", "Yuanzhi Li", "Shean Wang", "Lu Wang", "Weizhu Chen"],
     "year": 2021,
     "venue": "ICLR 2022",
+    "award": "PEFT Efficiency Landmark",
     "arxiv_id": "2106.09685",
     "category": "Efficiency & Fine-Tuning (PEFT)",
-    "significance": "Hypothesized that weight updates in LLMs possess low 'intrinsic rank', decomposing $\\Delta W$ into low-rank matrices $B \\times A$ ($r \\ll d$), slashing trainable parameters by 10,000x and GPU VRAM requirements by 3x without introducing inference latency.",
+    "significance": "Hypothesized that weight updates in LLMs possess low 'intrinsic rank', decomposing Delta W into low-rank matrices B x A (r << d), slashing trainable parameters by 10,000x and GPU VRAM requirements by 3x.",
     "core_equations": [
-      "h = W_0 x + \\Delta W x = W_0 x + \\frac{\\alpha}{r} B A x"
+      "h = W_0 x + \\frac{\\alpha}{r} B A x"
     ]
   },
   {
@@ -111,11 +117,12 @@
     "authors": ["Jared Kaplan", "Sam McCandlish", "Tom Henighan", "Tom B. Brown", "Benjamin Chess", "Rewon Child", "Scott Gray", "Alec Radford", "Jeffrey Wu", "Dario Amodei"],
     "year": 2020,
     "venue": "arXiv preprint 2020",
+    "award": "Empirical Scaling Landmark",
     "arxiv_id": "2001.08361",
     "category": "Scaling & Compute Optimization",
-    "significance": "Established empirical power-law relationships between cross-entropy loss and three fundamental axes: compute budget $C$, dataset size $D$, and parameter count $N$, providing the empirical compass for multi-million/billion dollar LLM training runs.",
+    "significance": "Established empirical power-law relationships between cross-entropy loss and three fundamental axes: compute budget C, dataset size D, and parameter count N.",
     "core_equations": [
-      "L(N) = \\left(\\frac{N_c}{N}\\right)^{\\alpha_N}, \\quad L(D) = \\left(\\frac{D_c}{D}\\right)^{\\alpha_D}, \\quad L(C) = \\left(\\frac{C_c}{C}\\right)^{\\alpha_C}"
+      "L(N) = (N_c / N)^{\\alpha_N}, \\quad L(D) = (D_c / D)^{\\alpha_D}, \\quad L(C) = (C_c / C)^{\\alpha_C}"
     ]
   },
   {
@@ -124,11 +131,96 @@
     "authors": ["Tri Dao", "Daniel Y. Fu", "Stefano Ermon", "Atri Rudra", "Christopher Ré"],
     "year": 2022,
     "venue": "NeurIPS 2022",
+    "award": "Systems & Hardware Landmark",
     "arxiv_id": "2205.14135",
     "category": "Systems, Hardware & IO Optimization",
-    "significance": "Re-architected exact self-attention around GPU memory hierarchy (HBM vs SRAM). By tiling inputs, fusing operations, and computing online softmax without materializing the $N \\times N$ attention matrix to HBM, it delivered 2-4x wall-clock speedups and enabled long-context scaling.",
+    "significance": "Re-architected exact self-attention around GPU memory hierarchy (HBM vs SRAM). By tiling inputs, fusing operations, and computing online softmax, delivered 2-4x wall-clock speedups.",
     "core_equations": [
       "m_{i}^{(j)} = \\max(m_{i}^{(j-1)}, \\max(S_{ij})), \\quad l_{i}^{(j)} = e^{m_{i}^{(j-1)} - m_{i}^{(j)}} l_{i}^{(j-1)} + \\sum e^{S_{ij} - m_{i}^{(j)}}"
+    ]
+  },
+  {
+    "id": "11_neural_odes_neurips2018_best",
+    "title": "Neural Ordinary Differential Equations",
+    "authors": ["Ricky T. Q. Chen", "Yulia Rubanova", "Jesse Bettencourt", "David Duvenaud"],
+    "year": 2018,
+    "venue": "NeurIPS 2018",
+    "award": "NeurIPS 2018 Best Paper Award",
+    "arxiv_id": "1810.01340",
+    "category": "Continuous-Depth & Dynamical Systems",
+    "significance": "Replaced discrete layer stacks with continuous-depth neural ODEs, using the adjoint sensitivity method to train with O(1) memory and adaptive computation.",
+    "core_equations": [
+      "\\frac{dh(t)}{dt} = f(h(t), t, \\theta), \\quad \\frac{da(t)}{dt} = -a(t)^T \\frac{\\partial f}{\\partial h}"
+    ]
+  },
+  {
+    "id": "12_lottery_ticket_iclr2019_best",
+    "title": "The Lottery Ticket Hypothesis: Finding Sparse, Trainable Neural Networks",
+    "authors": ["Jonathan Frankle", "Michael Carbin"],
+    "year": 2019,
+    "venue": "ICLR 2019",
+    "award": "ICLR 2019 Best Paper Award",
+    "arxiv_id": "1803.03635",
+    "category": "Network Pruning & Sparsity",
+    "significance": "Discovered that dense random networks contain sparse winning tickets that can train in isolation from initialization to match full network accuracy.",
+    "core_equations": [
+      "m \\odot \\theta_0 \\quad \\text{(Iterative Magnitude Pruning with weight rewinding)}"
+    ]
+  },
+  {
+    "id": "13_densenet_cvpr2017_best",
+    "title": "Densely Connected Convolutional Networks (DenseNet)",
+    "authors": ["Gao Huang", "Zhuang Liu", "Laurens van der Maaten", "Kilian Q. Weinberger"],
+    "year": 2017,
+    "venue": "CVPR 2017",
+    "award": "CVPR 2017 Best Paper Award",
+    "arxiv_id": "1608.06993",
+    "category": "Vision Architectures & Feature Reuse",
+    "significance": "Connected all layers directly via channel-wise concatenation, maximizing feature reuse, deep supervision, and parameter efficiency.",
+    "core_equations": [
+      "x_\\ell = H_\\ell([x_0, x_1, \\dots, x_{\\ell-1}])"
+    ]
+  },
+  {
+    "id": "14_swin_transformer_iccv2021_best",
+    "title": "Swin Transformer: Hierarchical Vision Transformer using Shifted Windows",
+    "authors": ["Ze Liu", "Yutong Lin", "Yue Cao", "Han Hu", "Yixuan Wei", "Zheng Zhang", "Stephen Lin", "Baining Guo"],
+    "year": 2021,
+    "venue": "ICCV 2021",
+    "award": "ICCV 2021 Marr Prize (Best Paper Award)",
+    "arxiv_id": "2103.14030",
+    "category": "Hierarchical Vision & Linear Complexity",
+    "significance": "Constructed hierarchical vision representations with linear computational complexity using Shifted Window self-attention (SW-MSA).",
+    "core_equations": [
+      "\\mathcal{O}(4hwC^2 + 2M^2hwC) \\quad \\text{(Linear Complexity in Image Resolution)}"
+    ]
+  },
+  {
+    "id": "15_emergent_abilities_mirage_neurips2023_best",
+    "title": "Are Emergent Abilities of Large Language Models a Mirage?",
+    "authors": ["Rylan Schaeffer", "Brando Miranda", "Sanmi Koyejo"],
+    "year": 2023,
+    "venue": "NeurIPS 2023",
+    "award": "NeurIPS 2023 Outstanding Paper Award",
+    "arxiv_id": "2304.15004",
+    "category": "LLM Science & Evaluation Dynamics",
+    "significance": "Proved that sharp emergent capability jumps in LLMs are mathematical mirages produced by non-linear threshold metrics rather than discrete model state changes.",
+    "core_equations": [
+      "\\text{Accuracy} = (1 - p)^L \\quad \\text{vs smooth linear metric } p"
+    ]
+  },
+  {
+    "id": "16_dpo_direct_preference_optimization",
+    "title": "Direct Preference Optimization: Your Language Model is Secretly a Reward Model",
+    "authors": ["Rafael Rafailov", "Archit Sharma", "Eric Mitchell", "Stefano Ermon", "Christopher D. Manning", "Chelsea Finn"],
+    "year": 2023,
+    "venue": "NeurIPS 2023",
+    "award": "NeurIPS 2023 Landmark Oral",
+    "arxiv_id": "2305.18290",
+    "category": "Alignment & Preference Learning",
+    "significance": "Derived the exact closed-form solution to the RLHF objective, replacing complex PPO actor-critic training with a simple cross-entropy loss directly on policy weights.",
+    "core_equations": [
+      "\\mathcal{L}_{\\text{DPO}}(\\pi_\\theta; \\pi_{\\text{ref}}) = -\\mathbb{E}\\left[\\log \\sigma\\left(\\beta \\log \\frac{\\pi_\\theta(y_w \\mid x)}{\\pi_{\\text{ref}}(y_w \\mid x)} - \\beta \\log \\frac{\\pi_\\theta(y_l \\mid x)}{\\pi_{\\text{ref}}(y_l \\mid x)}\\right)\\right]"
     ]
   }
 ]

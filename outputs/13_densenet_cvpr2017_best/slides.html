@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Explainer Slides: Densely Connected Convolutional Networks (DenseNet)</title>
+<style>
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #0f172a; color: #f8fafc; margin: 0; padding: 20px; }
+  .slide { background: #1e293b; border-radius: 12px; padding: 40px; margin-bottom: 40px; max-width: 900px; margin-left: auto; margin-right: auto; box-shadow: 0 10px 25px rgba(0,0,0,0.5); border-left: 6px solid #38bdf8; }
+  h1 { color: #38bdf8; font-size: 2.2rem; margin-top: 0; }
+  h2 { color: #94a3b8; font-size: 1.4rem; }
+  p, li { font-size: 1.15rem; line-height: 1.6; color: #cbd5e1; }
+  .highlight { color: #fbbf24; font-weight: bold; }
+  .callout { background: #334155; padding: 15px 20px; border-radius: 8px; margin: 20px 0; border-left: 4px solid #f43f5e; }
+  .footer { font-size: 0.9rem; color: #64748b; margin-top: 30px; border-top: 1px solid #334155; padding-top: 10px; }
+</style>
+</head>
+<body>
+
+<div class="slide">
+  <h1>Densely Connected Convolutional Networks (DenseNet)</h1>
+  <h2>Explainer Slide Deck & Video Storyboard</h2>
+  <p><strong>Audience:</strong> Alex Rivera | <strong>Status:</strong> Preprint / In Review</p>
+  <div class="callout">
+    <strong>Big Question:</strong> Can the permanent of an m &times; m matrix be computed with a polynomial number of arithmetic operations?
+  </div>
+  <div class="footer">Slide 1 of 6 &bull; Paper Reading Playbook</div>
+</div>
+
+<div class="slide">
+  <h1>The Core Dichotomy: VP vs VNP</h1>
+  <h2>Determinant (Easy) vs Permanent (Hard)</h2>
+  <ul>
+    <li><strong>Determinant:</strong> Alternating signs allow cancellations &rarr; $O(m^3)$ Gaussian elimination &rarr; <span class="highlight">Class VP</span></li>
+    <li><strong>Permanent:</strong> All positive signs &rarr; No cancellations &rarr; Requires summing $m!$ terms &rarr; <span class="highlight">Class VNP-Complete</span></li>
+  </ul>
+  <p>Valiant's 1979 conjecture: <em>VP &ne; VNP</em> over any field.</p>
+  <div class="footer">Slide 2 of 6 &bull; Foundations</div>
+</div>
+
+<div class="slide">
+  <h1>The Breakthrough Architecture</h1>
+  <h2>Bifurcation on Tensor Price Metrics</h2>
+  <div class="callout">
+    <strong>Dichotomy Theorem:</strong> Every tensor network price geometry is either <em>Rigid/Flat</em> or <em>Strictly Contracting</em>.
+  </div>
+  <ul>
+    <li><strong>Flat Branch:</strong> Rank preservation stops compression.</li>
+    <li><strong>Contracting Branch:</strong> Speed-up diagonalization forces an algebraic contradiction.</li>
+  </ul>
+  <div class="footer">Slide 3 of 6 &bull; Proof Architecture</div>
+</div>
+
+<div class="slide">
+  <h1>What The Result Does NOT Say</h1>
+  <h2>Critical Boundary Scaffolding</h2>
+  <ul>
+    <li>Does <strong>NOT</strong> prove P &ne; NP for Boolean circuits.</li>
+    <li>Does <strong>NOT</strong> yield an exponential lower bound (claims $m^{c(\log m)^{1/3}}$).</li>
+    <li>Currently an unverified machine-checked Lean 4 formalization.</li>
+  </ul>
+  <div class="footer">Slide 4 of 6 &bull; Boundaries & Critique</div>
+</div>
+
+<div class="slide">
+  <h1>Takeaways for Systems Engineers</h1>
+  <h2>From Theory to Engineering Intuition</h2>
+  <ul>
+    <li>Algebraic limits reveal fundamental boundaries in symbolic compilation and tensor shrinkage.</li>
+    <li>Machine-checked formalization (Lean 4) demonstrates the future of verifying complex claims.</li>
+  </ul>
+  <div class="footer">Slide 5 of 6 &bull; Applications</div>
+</div>
+
+<div class="slide">
+  <h1>Next Steps & Interactive Exploration</h1>
+  <h2>Continue in Obsidian & AI Tutor</h2>
+  <p>Open the generated vault in Obsidian and launch the interactive tutor with <code>python -m src.cli chat</code>.</p>
+  <div class="footer">Slide 6 of 6 &bull; Summary</div>
+</div>
+
+</body>
+</html>

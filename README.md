@@ -96,9 +96,11 @@ Generates an Obsidian vault formatted to the gold-standard topology (as demonstr
 
 ---
 
-## 4. The 10 Seminal Modern ML Papers
+## 4. The Foundation & Award-Winning Machine Learning Papers
 
-The repository includes curated deconstructions, manifests, and pre-generated Obsidian vaults for the 10 foundational papers of modern AI in [`papers/`](file:///d:/sanjay/paper-reading/papers/):
+> **Master Explainer & Knowledge Graph**: For an overarching synthesis linking all papers along 6 intellectual lineages with comparative matrices and future extension protocols, see the **[Master Top-Level Explainer](file:///d:/sanjay/paper-reading/MASTER_EXPLAINER.md)** or open the **[Master Obsidian Vault](file:///d:/sanjay/paper-reading/vaults/00_master_vault/00%20Master%20Index.md)**.
+
+The repository includes curated deconstructions, manifests, and pre-generated Obsidian vaults for the 16 most influential and top-venue award-winning papers in modern AI in [`papers/`](file:///d:/sanjay/paper-reading/papers/):
 
 | # | Paper Title | Venue / Year | Core Breakthrough | Vault & Report |
 | :--- | :--- | :--- | :--- | :--- |
@@ -112,6 +114,12 @@ The repository includes curated deconstructions, manifests, and pre-generated Ob
 | **08** | [LoRA: Low-Rank Adaptation](papers/08_lora_low_rank_adaptation.md) | ICLR 2022 | Decomposed weight updates into low-rank matrices $BA$; slashed VRAM by 3x. | [Vault](file:///d:/sanjay/paper-reading/vaults/08_lora_low_rank_adaptation-vault/00%20Index.md) &bull; [Report](file:///d:/sanjay/paper-reading/outputs/08_lora_low_rank_adaptation/EXPLAINER_REPORT.md) |
 | **09** | [Scaling Laws for Neural Language Models](papers/09_scaling_laws_neural_language_models.md) | arXiv 2020 | Empirical power-law relationships governing compute ($C$), data ($D$), and parameters ($N$). | [Vault](file:///d:/sanjay/paper-reading/vaults/09_scaling_laws_neural_language_models-vault/00%20Index.md) &bull; [Report](file:///d:/sanjay/paper-reading/outputs/09_scaling_laws_neural_language_models/EXPLAINER_REPORT.md) |
 | **10** | [FlashAttention: IO-Aware Attention](papers/10_flashattention_io_aware.md) | NeurIPS 2022 | GPU SRAM tiling and online softmax; 2-4x speedup enabling long contexts. | [Vault](file:///d:/sanjay/paper-reading/vaults/10_flashattention_io_aware-vault/00%20Index.md) &bull; [Report](file:///d:/sanjay/paper-reading/outputs/10_flashattention_io_aware/EXPLAINER_REPORT.md) |
+| **11** | [Neural Ordinary Differential Equations](papers/11_neural_odes_neurips2018_best.md) | **NeurIPS 2018 Best Paper** | Continuous-depth models via ODE solvers with $O(1)$ memory backpropagation. | [Vault](file:///d:/sanjay/paper-reading/vaults/11_neural_odes_neurips2018_best-vault/00%20Index.md) &bull; [Report](file:///d:/sanjay/paper-reading/outputs/11_neural_odes_neurips2018_best/EXPLAINER_REPORT.md) |
+| **12** | [The Lottery Ticket Hypothesis](papers/12_lottery_ticket_iclr2019_best.md) | **ICLR 2019 Best Paper** | Dense random networks contain sparse winning tickets trainable in isolation. | [Vault](file:///d:/sanjay/paper-reading/vaults/12_lottery_ticket_iclr2019_best-vault/00%20Index.md) &bull; [Report](file:///d:/sanjay/paper-reading/outputs/12_lottery_ticket_iclr2019_best/EXPLAINER_REPORT.md) |
+| **13** | [DenseNet](papers/13_densenet_cvpr2017_best.md) | **CVPR 2017 Best Paper** | Channel-wise concatenation connecting all layers, maximizing feature reuse. | [Vault](file:///d:/sanjay/paper-reading/vaults/13_densenet_cvpr2017_best-vault/00%20Index.md) &bull; [Report](file:///d:/sanjay/paper-reading/outputs/13_densenet_cvpr2017_best/EXPLAINER_REPORT.md) |
+| **14** | [Swin Transformer](papers/14_swin_transformer_iccv2021_best.md) | **ICCV 2021 Marr Prize (Best)** | Hierarchical vision transformer with linear $O(HW)$ complexity via Shifted Windows. | [Vault](file:///d:/sanjay/paper-reading/vaults/14_swin_transformer_iccv2021_best-vault/00%20Index.md) &bull; [Report](file:///d:/sanjay/paper-reading/outputs/14_swin_transformer_iccv2021_best/EXPLAINER_REPORT.md) |
+| **15** | [Are Emergent Abilities a Mirage?](papers/15_emergent_abilities_mirage_neurips2023_best.md) | **NeurIPS 2023 Outstanding** | Proved emergent capability jumps are mathematical mirages of non-linear metrics. | [Vault](file:///d:/sanjay/paper-reading/vaults/15_emergent_abilities_mirage_neurips2023_best-vault/00%20Index.md) &bull; [Report](file:///d:/sanjay/paper-reading/outputs/15_emergent_abilities_mirage_neurips2023_best/EXPLAINER_REPORT.md) |
+| **16** | [Direct Preference Optimization (DPO)](papers/16_dpo_direct_preference_optimization.md) | **NeurIPS 2023 Landmark** | Exact closed-form RLHF solution; eliminated reward models and PPO loops. | [Vault](file:///d:/sanjay/paper-reading/vaults/16_dpo_direct_preference_optimization-vault/00%20Index.md) &bull; [Report](file:///d:/sanjay/paper-reading/outputs/16_dpo_direct_preference_optimization/EXPLAINER_REPORT.md) |
 
 Detailed catalog with mathematical summaries is available in [`papers/README.md`](file:///d:/sanjay/paper-reading/papers/README.md) and [`papers/catalog.json`](file:///d:/sanjay/paper-reading/papers/catalog.json).
 
