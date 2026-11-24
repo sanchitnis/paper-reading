@@ -1,0 +1,45 @@
+{
+  "learner_id": "alex_rivera",
+  "name": "Alex Rivera",
+  "target_role": "Senior AI Systems Engineer & Applied ML Researcher",
+  "background": "7+ years in software engineering and production ML; transitioning into theoretical AI, novel model architectures, and foundational computational limits.",
+  "prior_knowledge": {
+    "strong": [
+      "Python / C++ / PyTorch / CUDA fundamentals",
+      "Standard Transformer & LLM architectures",
+      "Linear algebra, multivariate calculus, gradient optimization",
+      "Distributed systems, memory hierarchies, latency profiling",
+      "Basic complexity theory (P, NP, Big-O, asymptotic analysis)"
+    ],
+    "intermediate": [
+      "Probabilistic graphical models & Bayesian inference",
+      "Information theory (entropy, KL-divergence, coding theory)",
+      "Reinforcement Learning (MDPs, policy gradients, PPO)",
+      "Non-convex optimization dynamics"
+    ],
+    "developing": [
+      "Algebraic complexity theory (VP, VNP, arithmetic circuit lower bounds)",
+      "Differential geometry and Riemannian manifolds",
+      "Formal proof assistants (Lean 4, Coq, Isabelle)",
+      "Combinatorial geometry and extremal combinatorics"
+    ]
+  },
+  "pedagogical_preferences": {
+    "explanation_style": "Intuition-first, followed by rigorous mathematical deconstruction and runnable toy code implementations.",
+    "analogy_domain": "Software architecture, distributed systems, cache mechanics, modular software patterns.",
+    "math_scaffolding": "Always define every variable, tensor shape, index, and operator. Avoid hand-waving 'it is easy to see'. Expand intermediate algebraic steps.",
+    "visual_preference": "High use of Mermaid flowcharts, state diagrams, dataflow graphs, and ASCII schematics.",
+    "critique_orientation": "Aggressive truth-seeking: highlight hidden assumptions, hardware feasibility constraints, empirical gaps, and non-claims."
+  },
+  "multipass_budget_minutes": {
+    "pass1_triage": 15,
+    "pass2_conceptual_grasp": 60,
+    "pass3_deep_deconstruction": 180
+  },
+  "output_goals": {
+    "obsidian_vault": true,
+    "interactive_socratic_chatbot": true,
+    "notebook_audio_video_explainer": true,
+    "comprehensive_technical_report": true
+  }
+}
