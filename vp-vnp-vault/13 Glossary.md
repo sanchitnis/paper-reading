@@ -16,7 +16,7 @@ tags: [vp-vnp, glossary]
 - **Spectral point (Strassen)**: a multiplicative, sub-additive function on tensors, monotone under restriction. Used here as a "price".
 - **Price / metric dφ**: distance between "parties" induced by a spectral point; log φ of a wire = size × distance.
 - **CAT(0) / non-positive curvature**: metric-space notion of "no more curved than flat". The Bruhat–Tits inequality is its quadrilateral form.
-- **Flat vs contracting hypothesis**: the two cases of the proof ([[06 Flat case]], [[07 Contracting case]]).
+- **Flat vs contracting hypothesis**: the two cases of the proof ([06 Flat case](06%20Flat%20case.md), [07 Contracting case](07%20Contracting%20case.md)).
 - **Border complexity / approximate computation**: computing f as a limit of polynomials computed by small circuits (ε → 0).
 - **Determinantal complexity**: smallest d such that f is a projection of the d×d determinant.
 - **Geometric Complexity Theory (GCT)**: Mulmuley–Sohoni programme using representation theory and orbit closures.

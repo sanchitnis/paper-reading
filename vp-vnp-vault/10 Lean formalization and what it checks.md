@@ -30,4 +30,4 @@ flowchart LR
 | Remark N.6 (GCT consequence) | informal only |
 | Paper's prose matches Lean | claimed, not independently audited |
 
-The key human task is small: **read 98 lines**. See [[12 How to evaluate it yourself]].
+The key human task is small: **read 98 lines**. See [12 How to evaluate it yourself](12%20How%20to%20evaluate%20it%20yourself.md).

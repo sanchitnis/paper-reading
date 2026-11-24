@@ -98,36 +98,37 @@ Generates an Obsidian vault formatted to the gold-standard topology (as demonstr
 
 ## 4. The Foundation & Award-Winning Machine Learning Papers
 
-> **Master Explainer & Knowledge Graph**: For an overarching synthesis linking all papers along 6 intellectual lineages with comparative matrices and future extension protocols, see the **[Master Top-Level Explainer](file:///d:/sanjay/paper-reading/MASTER_EXPLAINER.md)** or open the **[Master Obsidian Vault](file:///d:/sanjay/paper-reading/vaults/00_master_vault/00%20Master%20Index.md)**.
+> **Master Explainer & Knowledge Graph**: For an overarching synthesis linking all papers along 6 intellectual lineages with comparative matrices and future extension protocols, see the **[Master Top-Level Explainer](MASTER_EXPLAINER.md)** or open the **[Master Obsidian Vault](vaults/00_master_vault/00%20Master%20Index.md)**.
 
-The repository includes curated deconstructions, manifests, and pre-generated Obsidian vaults for the 16 most influential and top-venue award-winning papers in modern AI in [`papers/`](file:///d:/sanjay/paper-reading/papers/):
+The repository includes curated deconstructions, manifests, and pre-generated Obsidian vaults for the 17 most influential and top-venue award-winning papers in modern AI in [`papers/`](papers/):
 
 | # | Paper Title | Venue / Year | Core Breakthrough | Vault & Report |
 | :--- | :--- | :--- | :--- | :--- |
-| **01** | [Attention Is All You Need](papers/01_attention_is_all_you_need.md) | NeurIPS 2017 | Dispensed with recurrence/convolutions; introduced multi-head self-attention. | [Vault](file:///d:/sanjay/paper-reading/vaults/01_attention_is_all_you_need-vault/00%20Index.md) &bull; [Report](file:///d:/sanjay/paper-reading/outputs/01_attention_is_all_you_need/EXPLAINER_REPORT.md) |
-| **02** | [Deep Residual Learning (ResNet)](papers/02_deep_residual_learning_resnet.md) | CVPR 2016 | Overcame vanishing gradients via identity skip connections ($y = \mathcal{F}(x) + x$). | [Vault](file:///d:/sanjay/paper-reading/vaults/02_deep_residual_learning_resnet-vault/00%20Index.md) &bull; [Report](file:///d:/sanjay/paper-reading/outputs/02_deep_residual_learning_resnet/EXPLAINER_REPORT.md) |
-| **03** | [BERT: Bidirectional Transformers](papers/03_bert_bidirectional_transformers.md) | NAACL 2019 | Masked Language Modeling (MLM) and deep bidirectional pre-training. | [Vault](file:///d:/sanjay/paper-reading/vaults/03_bert_bidirectional_transformers-vault/00%20Index.md) &bull; [Report](file:///d:/sanjay/paper-reading/outputs/03_bert_bidirectional_transformers/EXPLAINER_REPORT.md) |
-| **04** | [GPT-3: Language Models are Few-Shot Learners](papers/04_gpt3_language_models_few_shot.md) | NeurIPS 2020 | 175B parameter scaling; unlocked in-context zero- and few-shot learning. | [Vault](file:///d:/sanjay/paper-reading/vaults/04_gpt3_language_models_few_shot-vault/00%20Index.md) &bull; [Report](file:///d:/sanjay/paper-reading/outputs/04_gpt3_language_models_few_shot/EXPLAINER_REPORT.md) |
-| **05** | [DDPM: Diffusion Probabilistic Models](papers/05_ddpm_diffusion_models.md) | NeurIPS 2020 | Variational diffusion with score matching, establishing modern visual generative AI. | [Vault](file:///d:/sanjay/paper-reading/vaults/05_ddpm_diffusion_models-vault/00%20Index.md) &bull; [Report](file:///d:/sanjay/paper-reading/outputs/05_ddpm_diffusion_models/EXPLAINER_REPORT.md) |
-| **06** | [Vision Transformer (ViT)](papers/06_vision_transformer_vit.md) | ICLR 2021 | Applied pure Transformer encoders to linear projections of image patches. | [Vault](file:///d:/sanjay/paper-reading/vaults/06_vision_transformer_vit-vault/00%20Index.md) &bull; [Report](file:///d:/sanjay/paper-reading/outputs/06_vision_transformer_vit/EXPLAINER_REPORT.md) |
-| **07** | [InstructGPT: RLHF Alignment](papers/07_instructgpt_rlhf.md) | NeurIPS 2022 | SFT + Reward Model + PPO alignment loop; direct predecessor to ChatGPT. | [Vault](file:///d:/sanjay/paper-reading/vaults/07_instructgpt_rlhf-vault/00%20Index.md) &bull; [Report](file:///d:/sanjay/paper-reading/outputs/07_instructgpt_rlhf/EXPLAINER_REPORT.md) |
-| **08** | [LoRA: Low-Rank Adaptation](papers/08_lora_low_rank_adaptation.md) | ICLR 2022 | Decomposed weight updates into low-rank matrices $BA$; slashed VRAM by 3x. | [Vault](file:///d:/sanjay/paper-reading/vaults/08_lora_low_rank_adaptation-vault/00%20Index.md) &bull; [Report](file:///d:/sanjay/paper-reading/outputs/08_lora_low_rank_adaptation/EXPLAINER_REPORT.md) |
-| **09** | [Scaling Laws for Neural Language Models](papers/09_scaling_laws_neural_language_models.md) | arXiv 2020 | Empirical power-law relationships governing compute ($C$), data ($D$), and parameters ($N$). | [Vault](file:///d:/sanjay/paper-reading/vaults/09_scaling_laws_neural_language_models-vault/00%20Index.md) &bull; [Report](file:///d:/sanjay/paper-reading/outputs/09_scaling_laws_neural_language_models/EXPLAINER_REPORT.md) |
-| **10** | [FlashAttention: IO-Aware Attention](papers/10_flashattention_io_aware.md) | NeurIPS 2022 | GPU SRAM tiling and online softmax; 2-4x speedup enabling long contexts. | [Vault](file:///d:/sanjay/paper-reading/vaults/10_flashattention_io_aware-vault/00%20Index.md) &bull; [Report](file:///d:/sanjay/paper-reading/outputs/10_flashattention_io_aware/EXPLAINER_REPORT.md) |
-| **11** | [Neural Ordinary Differential Equations](papers/11_neural_odes_neurips2018_best.md) | **NeurIPS 2018 Best Paper** | Continuous-depth models via ODE solvers with $O(1)$ memory backpropagation. | [Vault](file:///d:/sanjay/paper-reading/vaults/11_neural_odes_neurips2018_best-vault/00%20Index.md) &bull; [Report](file:///d:/sanjay/paper-reading/outputs/11_neural_odes_neurips2018_best/EXPLAINER_REPORT.md) |
-| **12** | [The Lottery Ticket Hypothesis](papers/12_lottery_ticket_iclr2019_best.md) | **ICLR 2019 Best Paper** | Dense random networks contain sparse winning tickets trainable in isolation. | [Vault](file:///d:/sanjay/paper-reading/vaults/12_lottery_ticket_iclr2019_best-vault/00%20Index.md) &bull; [Report](file:///d:/sanjay/paper-reading/outputs/12_lottery_ticket_iclr2019_best/EXPLAINER_REPORT.md) |
-| **13** | [DenseNet](papers/13_densenet_cvpr2017_best.md) | **CVPR 2017 Best Paper** | Channel-wise concatenation connecting all layers, maximizing feature reuse. | [Vault](file:///d:/sanjay/paper-reading/vaults/13_densenet_cvpr2017_best-vault/00%20Index.md) &bull; [Report](file:///d:/sanjay/paper-reading/outputs/13_densenet_cvpr2017_best/EXPLAINER_REPORT.md) |
-| **14** | [Swin Transformer](papers/14_swin_transformer_iccv2021_best.md) | **ICCV 2021 Marr Prize (Best)** | Hierarchical vision transformer with linear $O(HW)$ complexity via Shifted Windows. | [Vault](file:///d:/sanjay/paper-reading/vaults/14_swin_transformer_iccv2021_best-vault/00%20Index.md) &bull; [Report](file:///d:/sanjay/paper-reading/outputs/14_swin_transformer_iccv2021_best/EXPLAINER_REPORT.md) |
-| **15** | [Are Emergent Abilities a Mirage?](papers/15_emergent_abilities_mirage_neurips2023_best.md) | **NeurIPS 2023 Outstanding** | Proved emergent capability jumps are mathematical mirages of non-linear metrics. | [Vault](file:///d:/sanjay/paper-reading/vaults/15_emergent_abilities_mirage_neurips2023_best-vault/00%20Index.md) &bull; [Report](file:///d:/sanjay/paper-reading/outputs/15_emergent_abilities_mirage_neurips2023_best/EXPLAINER_REPORT.md) |
-| **16** | [Direct Preference Optimization (DPO)](papers/16_dpo_direct_preference_optimization.md) | **NeurIPS 2023 Landmark** | Exact closed-form RLHF solution; eliminated reward models and PPO loops. | [Vault](file:///d:/sanjay/paper-reading/vaults/16_dpo_direct_preference_optimization-vault/00%20Index.md) &bull; [Report](file:///d:/sanjay/paper-reading/outputs/16_dpo_direct_preference_optimization/EXPLAINER_REPORT.md) |
+| **00** | [VP ≠ VNP over Every Field](papers/00_vp_vs_vnp_valiant.md) | **Valiant Complexity Challenge** | Separates VP and VNP over every field via tensor price metric dichotomy. | [Vault](vaults/00_vp_vs_vnp_valiant-vault/00%20Index.md) &bull; [Report](outputs/00_vp_vs_vnp_valiant/EXPLAINER_REPORT.md) |
+| **01** | [Attention Is All You Need](papers/01_attention_is_all_you_need.md) | NeurIPS 2017 | Dispensed with recurrence/convolutions; introduced multi-head self-attention. | [Vault](vaults/01_attention_is_all_you_need-vault/00%20Index.md) &bull; [Report](outputs/01_attention_is_all_you_need/EXPLAINER_REPORT.md) |
+| **02** | [Deep Residual Learning (ResNet)](papers/02_deep_residual_learning_resnet.md) | CVPR 2016 | Overcame vanishing gradients via identity skip connections ($y = \mathcal{F}(x) + x$). | [Vault](vaults/02_deep_residual_learning_resnet-vault/00%20Index.md) &bull; [Report](outputs/02_deep_residual_learning_resnet/EXPLAINER_REPORT.md) |
+| **03** | [BERT: Bidirectional Transformers](papers/03_bert_bidirectional_transformers.md) | NAACL 2019 | Masked Language Modeling (MLM) and deep bidirectional pre-training. | [Vault](vaults/03_bert_bidirectional_transformers-vault/00%20Index.md) &bull; [Report](outputs/03_bert_bidirectional_transformers/EXPLAINER_REPORT.md) |
+| **04** | [GPT-3: Language Models are Few-Shot Learners](papers/04_gpt3_language_models_few_shot.md) | NeurIPS 2020 | 175B parameter scaling; unlocked in-context zero- and few-shot learning. | [Vault](vaults/04_gpt3_language_models_few_shot-vault/00%20Index.md) &bull; [Report](outputs/04_gpt3_language_models_few_shot/EXPLAINER_REPORT.md) |
+| **05** | [DDPM: Diffusion Probabilistic Models](papers/05_ddpm_diffusion_models.md) | NeurIPS 2020 | Variational diffusion with score matching, establishing modern visual generative AI. | [Vault](vaults/05_ddpm_diffusion_models-vault/00%20Index.md) &bull; [Report](outputs/05_ddpm_diffusion_models/EXPLAINER_REPORT.md) |
+| **06** | [Vision Transformer (ViT)](papers/06_vision_transformer_vit.md) | ICLR 2021 | Applied pure Transformer encoders to linear projections of image patches. | [Vault](vaults/06_vision_transformer_vit-vault/00%20Index.md) &bull; [Report](outputs/06_vision_transformer_vit/EXPLAINER_REPORT.md) |
+| **07** | [InstructGPT: RLHF Alignment](papers/07_instructgpt_rlhf.md) | NeurIPS 2022 | SFT + Reward Model + PPO alignment loop; direct predecessor to ChatGPT. | [Vault](vaults/07_instructgpt_rlhf-vault/00%20Index.md) &bull; [Report](outputs/07_instructgpt_rlhf/EXPLAINER_REPORT.md) |
+| **08** | [LoRA: Low-Rank Adaptation](papers/08_lora_low_rank_adaptation.md) | ICLR 2022 | Decomposed weight updates into low-rank matrices $BA$; slashed VRAM by 3x. | [Vault](vaults/08_lora_low_rank_adaptation-vault/00%20Index.md) &bull; [Report](outputs/08_lora_low_rank_adaptation/EXPLAINER_REPORT.md) |
+| **09** | [Scaling Laws for Neural Language Models](papers/09_scaling_laws_neural_language_models.md) | arXiv 2020 | Empirical power-law relationships governing compute ($C$), data ($D$), and parameters ($N$). | [Vault](vaults/09_scaling_laws_neural_language_models-vault/00%20Index.md) &bull; [Report](outputs/09_scaling_laws_neural_language_models/EXPLAINER_REPORT.md) |
+| **10** | [FlashAttention: IO-Aware Attention](papers/10_flashattention_io_aware.md) | NeurIPS 2022 | GPU SRAM tiling and online softmax; 2-4x speedup enabling long contexts. | [Vault](vaults/10_flashattention_io_aware-vault/00%20Index.md) &bull; [Report](outputs/10_flashattention_io_aware/EXPLAINER_REPORT.md) |
+| **11** | [Neural Ordinary Differential Equations](papers/11_neural_odes_neurips2018_best.md) | **NeurIPS 2018 Best Paper** | Continuous-depth models via ODE solvers with $O(1)$ memory backpropagation. | [Vault](vaults/11_neural_odes_neurips2018_best-vault/00%20Index.md) &bull; [Report](outputs/11_neural_odes_neurips2018_best/EXPLAINER_REPORT.md) |
+| **12** | [The Lottery Ticket Hypothesis](papers/12_lottery_ticket_iclr2019_best.md) | **ICLR 2019 Best Paper** | Dense random networks contain sparse winning tickets trainable in isolation. | [Vault](vaults/12_lottery_ticket_iclr2019_best-vault/00%20Index.md) &bull; [Report](outputs/12_lottery_ticket_iclr2019_best/EXPLAINER_REPORT.md) |
+| **13** | [DenseNet](papers/13_densenet_cvpr2017_best.md) | **CVPR 2017 Best Paper** | Channel-wise concatenation connecting all layers, maximizing feature reuse. | [Vault](vaults/13_densenet_cvpr2017_best-vault/00%20Index.md) &bull; [Report](outputs/13_densenet_cvpr2017_best/EXPLAINER_REPORT.md) |
+| **14** | [Swin Transformer](papers/14_swin_transformer_iccv2021_best.md) | **ICCV 2021 Marr Prize (Best)** | Hierarchical vision transformer with linear $O(HW)$ complexity via Shifted Windows. | [Vault](vaults/14_swin_transformer_iccv2021_best-vault/00%20Index.md) &bull; [Report](outputs/14_swin_transformer_iccv2021_best/EXPLAINER_REPORT.md) |
+| **15** | [Are Emergent Abilities a Mirage?](papers/15_emergent_abilities_mirage_neurips2023_best.md) | **NeurIPS 2023 Outstanding** | Proved emergent capability jumps are mathematical mirages of non-linear metrics. | [Vault](vaults/15_emergent_abilities_mirage_neurips2023_best-vault/00%20Index.md) &bull; [Report](outputs/15_emergent_abilities_mirage_neurips2023_best/EXPLAINER_REPORT.md) |
+| **16** | [Direct Preference Optimization (DPO)](papers/16_dpo_direct_preference_optimization.md) | **NeurIPS 2023 Landmark** | Exact closed-form RLHF solution; eliminated reward models and PPO loops. | [Vault](vaults/16_dpo_direct_preference_optimization-vault/00%20Index.md) &bull; [Report](outputs/16_dpo_direct_preference_optimization/EXPLAINER_REPORT.md) |
 
-Detailed catalog with mathematical summaries is available in [`papers/README.md`](file:///d:/sanjay/paper-reading/papers/README.md) and [`papers/catalog.json`](file:///d:/sanjay/paper-reading/papers/catalog.json).
+Detailed catalog with mathematical summaries is available in [`papers/README.md`](papers/README.md) and [`papers/catalog.json`](papers/catalog.json).
 
 ---
 
 ## 5. Persona & Learner Scaffolding
 
-The playbook is personalized via [`learner_profile.json`](file:///d:/sanjay/paper-reading/learner_profile.json):
+The playbook is personalized via [`learner_profile.json`](learner_profile.json):
 
 | Dimension | Profile Configuration (Alex Rivera) |
 | :--- | :--- |
@@ -144,14 +145,14 @@ The playbook is personalized via [`learner_profile.json`](file:///d:/sanjay/pape
 ## 6. Agent Skills in `.agents/skills/`
 
 The system provides 6 production-grade agent skills:
-1. [`.agents/skills/paper-ingest`](file:///d:/sanjay/paper-reading/.agents/skills/paper-ingest/SKILL.md): Ingests PDF, arXiv, HTML, and text papers into structured JSON.
-2. [`.agents/skills/multipass-reader`](file:///d:/sanjay/paper-reading/.agents/skills/multipass-reader/SKILL.md): Orchestrates Pass 1, Pass 2, and Pass 3 reading gates.
-3. [`.agents/skills/concept-explainer`](file:///d:/sanjay/paper-reading/.agents/skills/concept-explainer/SKILL.md): AI Chatbot tutor for Socratic and Feynman dialogue.
-4. [`.agents/skills/obsidian-vault-builder`](file:///d:/sanjay/paper-reading/.agents/skills/obsidian-vault-builder/SKILL.md): Generates 15-note interconnected Obsidian vaults.
-5. [`.agents/skills/gemini-notebook-media`](file:///d:/sanjay/paper-reading/.agents/skills/gemini-notebook-media/SKILL.md): Produces NotebookLM podcast scripts, slides, and video assets.
-6. [`.agents/skills/explainer-report-generator`](file:///d:/sanjay/paper-reading/.agents/skills/explainer-report-generator/SKILL.md): Synthesizes comprehensive technical reports.
+1. [`.agents/skills/paper-ingest`](.agents/skills/paper-ingest/SKILL.md): Ingests PDF, arXiv, HTML, and text papers into structured JSON.
+2. [`.agents/skills/multipass-reader`](.agents/skills/multipass-reader/SKILL.md): Orchestrates Pass 1, Pass 2, and Pass 3 reading gates.
+3. [`.agents/skills/concept-explainer`](.agents/skills/concept-explainer/SKILL.md): AI Chatbot tutor for Socratic and Feynman dialogue.
+4. [`.agents/skills/obsidian-vault-builder`](.agents/skills/obsidian-vault-builder/SKILL.md): Generates 15-note interconnected Obsidian vaults.
+5. [`.agents/skills/gemini-notebook-media`](.agents/skills/gemini-notebook-media/SKILL.md): Produces NotebookLM podcast scripts, slides, and video assets.
+6. [`.agents/skills/explainer-report-generator`](.agents/skills/explainer-report-generator/SKILL.md): Synthesizes comprehensive technical reports.
 
-Detailed system specifications are documented in [`agents.md`](file:///d:/sanjay/paper-reading/agents.md).
+Detailed system specifications are documented in [`agents.md`](agents.md).
 
 ---
 
@@ -169,4 +170,4 @@ python -m src.cli run-all "vp-vnp-vault/00 Index.md"
 python -m src.cli chat "vp-vnp-vault/00 Index.md"
 ```
 
-For detailed instructions, see [`GETTING_STARTED.md`](file:///d:/sanjay/paper-reading/GETTING_STARTED.md).
+For detailed instructions, see [`GETTING_STARTED.md`](GETTING_STARTED.md).

@@ -1,0 +1,22 @@
+# GitHub Pages Configuration
+title: Paper Reading Playbook
+description: Autonomous Multi-Agent Research Explorer & Knowledge Graph
+theme: jekyll-theme-cayman
+
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+  syntax_highlighter: rouge
+
+# Ensure dotfiles like .agents are processed if needed
+include:
+  - .agents
+
+# Exclude virtual environments and temporary files
+exclude:
+  - venv/
+  - .venv/
+  - __pycache__/
+  - .pytest_cache/
+  - tools/

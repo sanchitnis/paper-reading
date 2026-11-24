@@ -32,7 +32,7 @@ export GEMINI_API_KEY="your-gemini-api-key"
 
 ## 2. Personalize Your Learner Profile
 
-The playbook adapts its explanations, analogies, and mathematical scaffolding directly to your background. Open [`learner_profile.json`](file:///d:/sanjay/paper-reading/learner_profile.json) to inspect or modify your settings:
+The playbook adapts its explanations, analogies, and mathematical scaffolding directly to your background. Open [`learner_profile.json`](learner_profile.json) to inspect or modify your settings:
 
 ```json
 {

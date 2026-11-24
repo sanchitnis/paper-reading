@@ -19,4 +19,4 @@ tags: [vp-vnp, theorem]
 - Not known which of the two proof cases actually occurs, even over ℝ.
 
 ## How big a jump is this?
-Previously, the best lower bound for any explicit polynomial and general circuits was **Ω(n log d)** (Strassen; Baur–Strassen 1983). For the permanent, nothing above about m² log m was known *(paper §1.2)*. The claim goes from near-linear to quasi-polynomial in one step. That is why the claim needs unusually careful checking. See [[11 Reception and valid comments]].
+Previously, the best lower bound for any explicit polynomial and general circuits was **Ω(n log d)** (Strassen; Baur–Strassen 1983). For the permanent, nothing above about m² log m was known *(paper §1.2)*. The claim goes from near-linear to quasi-polynomial in one step. That is why the claim needs unusually careful checking. See [11 Reception and valid comments](11%20Reception%20and%20valid%20comments.md).

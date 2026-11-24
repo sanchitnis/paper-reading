@@ -12,7 +12,7 @@ flowchart TD
     C --> E{"Core Resolution / Contradiction"}
     D --> E
     E --> F["Paper's Main Result:<br/>BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding"]
-    F -.->|"Deliberate Non-Claim"| G["Does NOT solve broader open problems<br/>(See [[08 What the result does not say]])"]
+    F -.->|"Deliberate Non-Claim"| G["Does NOT solve broader open problems<br/>(See 08 What the result does not say)"]
     F --> H["Verification Status:<br/>Preprint / In Review"]
 ```
 

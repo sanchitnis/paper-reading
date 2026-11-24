@@ -11,4 +11,4 @@ tags: [01_attention_is_all_you_need, claims]
 - **Asymptotic Bound**: Achieves superpolynomial separation or improved convergence guarantees.
 - **Scope**: Valid across the stated parameter regime.
 
-See [[05 Proof architecture]] for how these claims are linked together.
+See [05 Proof architecture](05%20Proof%20architecture.md) for how these claims are linked together.

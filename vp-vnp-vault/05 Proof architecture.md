@@ -28,4 +28,4 @@ Why the dichotomy is clever: you don't need to know which world you live in. You
 
 ## Why this might avoid known barriers *(paper's own discussion)*
 - **Rank methods barrier**: the proof uses *spectral points*, not ranks, though these are only shown to exist via Zorn's lemma.
-- **Natural proofs / algebrization / relativization**: the paper says algebraically natural proofs may be unable to give superpolynomial bounds for general circuits, and that it has **not analysed** relativization or algebrization. An expert reviewer will want to see this addressed. See [[12 How to evaluate it yourself]].
+- **Natural proofs / algebrization / relativization**: the paper says algebraically natural proofs may be unable to give superpolynomial bounds for general circuits, and that it has **not analysed** relativization or algebrization. An expert reviewer will want to see this addressed. See [12 How to evaluate it yourself](12%20How%20to%20evaluate%20it%20yourself.md).

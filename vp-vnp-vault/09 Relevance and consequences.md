@@ -3,7 +3,7 @@ tags: [vp-vnp, relevance]
 ---
 # Relevance and consequences
 
-*If the claim holds up.* Everything below depends on verification. See [[12 How to evaluate it yourself]].
+*If the claim holds up.* Everything below depends on verification. See [12 How to evaluate it yourself](12%20How%20to%20evaluate%20it%20yourself.md).
 
 ## 1. Mathematics and theoretical CS
 - **Settles Valiant's 1979 conjecture** over every field. This is the central question of algebraic complexity.
@@ -20,7 +20,7 @@ Lower bounds for the permanent connect to **polynomial identity testing (PIT)** 
 
 ## 4. AI and mathematics
 - Claimed as the first end-to-end AI discovery of a result of this kind, with a machine-checked proof.
-- **Trust model is the real story.** Lean certifies "proof matches typed statement". It does *not* certify "typed statement matches the mathematical question". The README admits this gap. See [[10 Lean formalization and what it checks]].
+- **Trust model is the real story.** Lean certifies "proof matches typed statement". It does *not* certify "typed statement matches the mathematical question". The README admits this gap. See [10 Lean formalization and what it checks](10%20Lean%20formalization%20and%20what%20it%20checks.md).
 - A template for how AI-generated mathematics could be audited: small human-readable statement file, large machine-checked proof file, independent checkers.
 
 ## 5. What it does *not* touch

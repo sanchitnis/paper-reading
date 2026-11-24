@@ -12,11 +12,11 @@ flowchart TD
     C --> E{"Core Resolution / Contradiction"}
     D --> E
     E --> F["Paper's Main Result:<br/>VP ≠ VNP over every field: explainer vault"]
-    F -.->|"Deliberate Non-Claim"| G["Does NOT solve broader open problems<br/>(See [[08 What the result does not say]])"]
+    F -.->|"Deliberate Non-Claim"| G["Does NOT solve broader open problems<br/>(See 08 What the result does not say)"]
     F --> H["Verification Status:<br/>Preprint / In Review"]
 ```
 
 ## One-paragraph version
-**Paper:** *VP ≠ VNP over every field*, credited to "Claude (Anthropic)". It was posted 23 Nov 2026 in `anthropics/formal-math/vp-vnp` with a Lean 4 formalization. **Status: unverified by any human mathematician.** The paper and README both say so. See [[10 Lean formalization and what it checks]].
+**Paper:** *VP ≠ VNP over every field*, credited to "Claude (Anthropic)". It was posted 23 Nov 2026 in `anthropics/formal-math/vp-vnp` with a Lean 4 formalization. **Status: unverified by any human mathematician.** The paper and README both say so. See [10 Lean formalization and what it checks](10%20Lean%20formalization%20and%20what%20it%20checks.md).
 
 *(analogy)* Think of this paper's core contribution as identifying an invariant in the problem space: either the system is constrained by geometric rigidity, or it admits an exponential reduction, leaving no middle ground for polynomial-size shortcuts.

@@ -1,6 +1,6 @@
 # Master Top-Level Explainer: The Intellectual Architecture of Modern Machine Learning
 
-> A unified, cross-cutting synthesis connecting the seminal breakthroughs and top-venue award-winning papers in modern AI. Designed as the cognitive compass for the autonomous learner ([Alex Rivera](file:///d:/sanjay/paper-reading/learner_profile.json)) and extensible to all future research papers.
+> A unified, cross-cutting synthesis connecting the seminal breakthroughs and top-venue award-winning papers in modern AI. Designed as the cognitive compass for the autonomous learner ([Alex Rivera](learner_profile.json)) and extensible to all future research papers.
 
 ---
 
@@ -144,20 +144,21 @@ python -m src.cli chat "https://arxiv.org/abs/2405.xxxxx"
 
 Every paper in the master catalog is fully realized as an independent, interconnected Obsidian vault and technical report:
 
-1. **Valiant's VP vs VNP Foundation**: [Reference Vault](file:///d:/sanjay/paper-reading/vp-vnp-vault/00%20Index.md) &bull; [Generated Vault](file:///d:/sanjay/paper-reading/vaults/00-index-vault/00%20Index.md) &bull; [Report](file:///d:/sanjay/paper-reading/outputs/00-index/EXPLAINER_REPORT.md)
-2. **Attention Is All You Need**: [Vault](file:///d:/sanjay/paper-reading/vaults/01_attention_is_all_you_need-vault/00%20Index.md) &bull; [Report](file:///d:/sanjay/paper-reading/outputs/01_attention_is_all_you_need/EXPLAINER_REPORT.md)
-3. **ResNet (CVPR 2016 Best Paper)**: [Vault](file:///d:/sanjay/paper-reading/vaults/02_deep_residual_learning_resnet-vault/00%20Index.md) &bull; [Report](file:///d:/sanjay/paper-reading/outputs/02_deep_residual_learning_resnet/EXPLAINER_REPORT.md)
-4. **BERT (NAACL 2019 Best Paper)**: [Vault](file:///d:/sanjay/paper-reading/vaults/03_bert_bidirectional_transformers-vault/00%20Index.md) &bull; [Report](file:///d:/sanjay/paper-reading/outputs/03_bert_bidirectional_transformers/EXPLAINER_REPORT.md)
-5. **GPT-3 (NeurIPS 2020 Outstanding Paper)**: [Vault](file:///d:/sanjay/paper-reading/vaults/04_gpt3_language_models_few_shot-vault/00%20Index.md) &bull; [Report](file:///d:/sanjay/paper-reading/outputs/04_gpt3_language_models_few_shot/EXPLAINER_REPORT.md)
-6. **DDPM Diffusion**: [Vault](file:///d:/sanjay/paper-reading/vaults/05_ddpm_diffusion_models-vault/00%20Index.md) &bull; [Report](file:///d:/sanjay/paper-reading/outputs/05_ddpm_diffusion_models/EXPLAINER_REPORT.md)
-7. **Vision Transformer (ViT)**: [Vault](file:///d:/sanjay/paper-reading/vaults/06_vision_transformer_vit-vault/00%20Index.md) &bull; [Report](file:///d:/sanjay/paper-reading/outputs/06_vision_transformer_vit/EXPLAINER_REPORT.md)
-8. **InstructGPT (RLHF)**: [Vault](file:///d:/sanjay/paper-reading/vaults/07_instructgpt_rlhf-vault/00%20Index.md) &bull; [Report](file:///d:/sanjay/paper-reading/outputs/07_instructgpt_rlhf/EXPLAINER_REPORT.md)
-9. **LoRA**: [Vault](file:///d:/sanjay/paper-reading/vaults/08_lora_low_rank_adaptation-vault/00%20Index.md) &bull; [Report](file:///d:/sanjay/paper-reading/outputs/08_lora_low_rank_adaptation/EXPLAINER_REPORT.md)
-10. **Scaling Laws**: [Vault](file:///d:/sanjay/paper-reading/vaults/09_scaling_laws_neural_language_models-vault/00%20Index.md) &bull; [Report](file:///d:/sanjay/paper-reading/outputs/09_scaling_laws_neural_language_models/EXPLAINER_REPORT.md)
-11. **FlashAttention**: [Vault](file:///d:/sanjay/paper-reading/vaults/10_flashattention_io_aware-vault/00%20Index.md) &bull; [Report](file:///d:/sanjay/paper-reading/outputs/10_flashattention_io_aware/EXPLAINER_REPORT.md)
-12. **Neural ODEs (NeurIPS 2018 Best Paper)**: [Vault](file:///d:/sanjay/paper-reading/vaults/11_neural_odes_neurips2018_best-vault/00%20Index.md) &bull; [Report](file:///d:/sanjay/paper-reading/outputs/11_neural_odes_neurips2018_best/EXPLAINER_REPORT.md)
-13. **The Lottery Ticket Hypothesis (ICLR 2019 Best Paper)**: [Vault](file:///d:/sanjay/paper-reading/vaults/12_lottery_ticket_iclr2019_best-vault/00%20Index.md) &bull; [Report](file:///d:/sanjay/paper-reading/outputs/12_lottery_ticket_iclr2019_best/EXPLAINER_REPORT.md)
-14. **DenseNet (CVPR 2017 Best Paper)**: [Vault](file:///d:/sanjay/paper-reading/vaults/13_densenet_cvpr2017_best-vault/00%20Index.md) &bull; [Report](file:///d:/sanjay/paper-reading/outputs/13_densenet_cvpr2017_best/EXPLAINER_REPORT.md)
-15. **Swin Transformer (ICCV 2021 Marr Prize)**: [Vault](file:///d:/sanjay/paper-reading/vaults/14_swin_transformer_iccv2021_best-vault/00%20Index.md) &bull; [Report](file:///d:/sanjay/paper-reading/outputs/14_swin_transformer_iccv2021_best/EXPLAINER_REPORT.md)
-16. **Are Emergent Abilities a Mirage? (NeurIPS 2023 Outstanding Paper)**: [Vault](file:///d:/sanjay/paper-reading/vaults/15_emergent_abilities_mirage_neurips2023_best-vault/00%20Index.md) &bull; [Report](file:///d:/sanjay/paper-reading/outputs/15_emergent_abilities_mirage_neurips2023_best/EXPLAINER_REPORT.md)
-17. **Direct Preference Optimization (DPO)**: [Vault](file:///d:/sanjay/paper-reading/vaults/16_dpo_direct_preference_optimization-vault/00%20Index.md) &bull; [Report](file:///d:/sanjay/paper-reading/outputs/16_dpo_direct_preference_optimization/EXPLAINER_REPORT.md)
+0. **VP ≠ VNP over Every Field**: [Paper](papers/00_vp_vs_vnp_valiant.md) &bull; [Vault](vaults/00_vp_vs_vnp_valiant-vault/00%20Index.md) &bull; [Report](outputs/00_vp_vs_vnp_valiant/EXPLAINER_REPORT.md)
+1. **Valiant's VP vs VNP Reference**: [Reference Vault](vp-vnp-vault/00%20Index.md) &bull; [Generated Vault](vaults/00-index-vault/00%20Index.md) &bull; [Report](outputs/00-index/EXPLAINER_REPORT.md)
+2. **Attention Is All You Need**: [Vault](vaults/01_attention_is_all_you_need-vault/00%20Index.md) &bull; [Report](outputs/01_attention_is_all_you_need/EXPLAINER_REPORT.md)
+3. **ResNet (CVPR 2016 Best Paper)**: [Vault](vaults/02_deep_residual_learning_resnet-vault/00%20Index.md) &bull; [Report](outputs/02_deep_residual_learning_resnet/EXPLAINER_REPORT.md)
+4. **BERT (NAACL 2019 Best Paper)**: [Vault](vaults/03_bert_bidirectional_transformers-vault/00%20Index.md) &bull; [Report](outputs/03_bert_bidirectional_transformers/EXPLAINER_REPORT.md)
+5. **GPT-3 (NeurIPS 2020 Outstanding Paper)**: [Vault](vaults/04_gpt3_language_models_few_shot-vault/00%20Index.md) &bull; [Report](outputs/04_gpt3_language_models_few_shot/EXPLAINER_REPORT.md)
+6. **DDPM Diffusion**: [Vault](vaults/05_ddpm_diffusion_models-vault/00%20Index.md) &bull; [Report](outputs/05_ddpm_diffusion_models/EXPLAINER_REPORT.md)
+7. **Vision Transformer (ViT)**: [Vault](vaults/06_vision_transformer_vit-vault/00%20Index.md) &bull; [Report](outputs/06_vision_transformer_vit/EXPLAINER_REPORT.md)
+8. **InstructGPT (RLHF)**: [Vault](vaults/07_instructgpt_rlhf-vault/00%20Index.md) &bull; [Report](outputs/07_instructgpt_rlhf/EXPLAINER_REPORT.md)
+9. **LoRA**: [Vault](vaults/08_lora_low_rank_adaptation-vault/00%20Index.md) &bull; [Report](outputs/08_lora_low_rank_adaptation/EXPLAINER_REPORT.md)
+10. **Scaling Laws**: [Vault](vaults/09_scaling_laws_neural_language_models-vault/00%20Index.md) &bull; [Report](outputs/09_scaling_laws_neural_language_models/EXPLAINER_REPORT.md)
+11. **FlashAttention**: [Vault](vaults/10_flashattention_io_aware-vault/00%20Index.md) &bull; [Report](outputs/10_flashattention_io_aware/EXPLAINER_REPORT.md)
+12. **Neural ODEs (NeurIPS 2018 Best Paper)**: [Vault](vaults/11_neural_odes_neurips2018_best-vault/00%20Index.md) &bull; [Report](outputs/11_neural_odes_neurips2018_best/EXPLAINER_REPORT.md)
+13. **The Lottery Ticket Hypothesis (ICLR 2019 Best Paper)**: [Vault](vaults/12_lottery_ticket_iclr2019_best-vault/00%20Index.md) &bull; [Report](outputs/12_lottery_ticket_iclr2019_best/EXPLAINER_REPORT.md)
+14. **DenseNet (CVPR 2017 Best Paper)**: [Vault](vaults/13_densenet_cvpr2017_best-vault/00%20Index.md) &bull; [Report](outputs/13_densenet_cvpr2017_best/EXPLAINER_REPORT.md)
+15. **Swin Transformer (ICCV 2021 Marr Prize)**: [Vault](vaults/14_swin_transformer_iccv2021_best-vault/00%20Index.md) &bull; [Report](outputs/14_swin_transformer_iccv2021_best/EXPLAINER_REPORT.md)
+16. **Are Emergent Abilities a Mirage? (NeurIPS 2023 Outstanding Paper)**: [Vault](vaults/15_emergent_abilities_mirage_neurips2023_best-vault/00%20Index.md) &bull; [Report](outputs/15_emergent_abilities_mirage_neurips2023_best/EXPLAINER_REPORT.md)
+17. **Direct Preference Optimization (DPO)**: [Vault](vaults/16_dpo_direct_preference_optimization-vault/00%20Index.md) &bull; [Report](outputs/16_dpo_direct_preference_optimization/EXPLAINER_REPORT.md)

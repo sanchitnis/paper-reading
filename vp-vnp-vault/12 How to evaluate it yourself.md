@@ -21,7 +21,7 @@ Read `Statement.lean` (98 lines, printed in paper §3). Check, in order:
 - Grep for `sorry`, `axiom`, `native_decide`, `unsafe`, `implemented_by`.
 
 ## Level 3: months, specialist
-- Read the proof for the two cases: [[06 Flat case]] and [[07 Contracting case]].
-- Test against barriers: relativization, algebrization, algebraic natural proofs ([[05 Proof architecture]]).
-- Sanity-check by seeing where the proof **must** break: for the determinant (reduction step P) and for Boolean circuits (inspection steps C). The paper explains both in §2.5 ([[08 What the result does not say]]).
+- Read the proof for the two cases: [06 Flat case](06%20Flat%20case.md) and [07 Contracting case](07%20Contracting%20case.md).
+- Test against barriers: relativization, algebrization, algebraic natural proofs ([05 Proof architecture](05%20Proof%20architecture.md)).
+- Sanity-check by seeing where the proof **must** break: for the determinant (reduction step P) and for Boolean circuits (inspection steps C). The paper explains both in §2.5 ([08 What the result does not say](08%20What%20the%20result%20does%20not%20say.md)).
 - Check that Remark N.6 follows from Theorem 1.4, since it has no Lean proof.

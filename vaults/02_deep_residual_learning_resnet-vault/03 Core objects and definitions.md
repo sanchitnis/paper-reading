@@ -12,4 +12,4 @@ tags: [02_deep_residual_learning_resnet, definitions]
    - Contrast between easy classes (polynomial size) and hard classes (exponential sums).
 
 > [!IMPORTANT] Scaffolding for Alex Rivera
-> Every variable and index should be tracked through its dimension and domain. Refer to [[13 Glossary]] for cross-references.
+> Every variable and index should be tracked through its dimension and domain. Refer to [13 Glossary](13%20Glossary.md) for cross-references.

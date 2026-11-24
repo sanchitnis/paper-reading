@@ -20,4 +20,4 @@ So the algebraic problem is more rigid. That rigidity is why lower bounds are *p
 
 ## How they connect
 - If **VP = VNP** (under suitable assumptions), then P/poly = NP/poly. This is Bürgisser (2000) *(paper)*. So *proving VP ≠ VNP is a necessary step on one route to P ≠ NP*. In this sense a separation is a warm-up.
-- The reverse implication is **not known**. VP ≠ VNP does not imply P ≠ NP. See [[08 What the result does not say]].
+- The reverse implication is **not known**. VP ≠ VNP does not imply P ≠ NP. See [08 What the result does not say](08%20What%20the%20result%20does%20not%20say.md).
