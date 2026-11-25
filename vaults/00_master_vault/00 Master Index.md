@@ -13,10 +13,11 @@ aliases: [Master AI Knowledge Graph, Master Index]
 
 ---
 
-## The Paper Network (17 Foundations & Award Winners)
+## The Paper Network (18 Foundations & Award Winners)
 
 ### 0. Theoretical Complexity & Foundational Lower Bounds
 - [VP ≠ VNP over Every Field](../00_vp_vs_vnp_valiant-vault/00%20Index.md) *(Valiant 1979 Conjecture)* — Permanent vs Determinant lower bound over arbitrary fields
+- [Arithmetic Circuits: A Chasm at Depth Four](../17_agrawal_vinay_chasm_depth_four-vault/00%20Index.md) *(Agrawal & Vinay 2008)* — Proves depth-4 lower bounds imply unrestricted circuit lower bounds (collapsing the VP vs VNP quest to depth 4)
 
 ### 1. Architectures, Residuals & Continuous Depth
 - [ResNet](../02_deep_residual_learning_resnet-vault/00%20Index.md) *(CVPR 2016 Best Paper)* — Identity skip connections $y = \mathcal{F}(x) + x$

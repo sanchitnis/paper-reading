@@ -100,7 +100,7 @@ Generates an Obsidian vault formatted to the gold-standard topology (as demonstr
 
 > **Master Explainer & Knowledge Graph**: For an overarching synthesis linking all papers along 6 intellectual lineages with comparative matrices and future extension protocols, see the **[Master Top-Level Explainer](MASTER_EXPLAINER.md)** or open the **[Master Obsidian Vault](vaults/00_master_vault/00%20Master%20Index.md)**.
 
-The repository includes curated deconstructions, manifests, and pre-generated Obsidian vaults for the 17 most influential and top-venue award-winning papers in modern AI in [`papers/`](papers/):
+The repository includes curated deconstructions, manifests, and pre-generated Obsidian vaults for the 18 most influential and top-venue award-winning papers in modern AI and complexity theory in [`papers/`](papers/):
 
 | # | Paper Title | Venue / Year | Core Breakthrough | Vault & Report |
 | :--- | :--- | :--- | :--- | :--- |
@@ -121,6 +121,7 @@ The repository includes curated deconstructions, manifests, and pre-generated Ob
 | **14** | [Swin Transformer](papers/14_swin_transformer_iccv2021_best.md) | **ICCV 2021 Marr Prize (Best)** | Hierarchical vision transformer with linear $O(HW)$ complexity via Shifted Windows. | [Vault](vaults/14_swin_transformer_iccv2021_best-vault/00%20Index.md) &bull; [Report](outputs/14_swin_transformer_iccv2021_best/EXPLAINER_REPORT.md) |
 | **15** | [Are Emergent Abilities a Mirage?](papers/15_emergent_abilities_mirage_neurips2023_best.md) | **NeurIPS 2023 Outstanding** | Proved emergent capability jumps are mathematical mirages of non-linear metrics. | [Vault](vaults/15_emergent_abilities_mirage_neurips2023_best-vault/00%20Index.md) &bull; [Report](outputs/15_emergent_abilities_mirage_neurips2023_best/EXPLAINER_REPORT.md) |
 | **16** | [Direct Preference Optimization (DPO)](papers/16_dpo_direct_preference_optimization.md) | **NeurIPS 2023 Landmark** | Exact closed-form RLHF solution; eliminated reward models and PPO loops. | [Vault](vaults/16_dpo_direct_preference_optimization-vault/00%20Index.md) &bull; [Report](outputs/16_dpo_direct_preference_optimization/EXPLAINER_REPORT.md) |
+| **17** | [Arithmetic Circuits: A Chasm at Depth Four](papers/17_agrawal_vinay_chasm_depth_four.md) | **FOCS 2008 Landmark** | Proved depth-4 lower bounds imply unrestricted circuit lower bounds (VP ≠ VNP). | [Vault](vaults/17_agrawal_vinay_chasm_depth_four-vault/00%20Index.md) &bull; [Report](outputs/17_agrawal_vinay_chasm_depth_four/EXPLAINER_REPORT.md) |
 
 Detailed catalog with mathematical summaries is available in [`papers/README.md`](papers/README.md) and [`papers/catalog.json`](papers/catalog.json).
 

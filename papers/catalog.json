@@ -358,5 +358,24 @@
     "core_equations": [
       "\\mathcal{L}_{\\text{DPO}}(\\pi_\\theta; \\pi_{\\text{ref}}) = -\\mathbb{E}\\left[\\log \\sigma\\left(\\beta \\log \\frac{\\pi_\\theta(y_w \\mid x)}{\\pi_{\\text{ref}}(y_w \\mid x)} - \\beta \\log \\frac{\\pi_\\theta(y_l \\mid x)}{\\pi_{\\text{ref}}(y_l \\mid x)}\\right)\\right]"
     ]
+  },
+  {
+    "id": "17_agrawal_vinay_chasm_depth_four",
+    "title": "Arithmetic Circuits: A Chasm at Depth Four",
+    "authors": [
+      "Manindra Agrawal",
+      "V. Vinay"
+    ],
+    "year": 2008,
+    "venue": "FOCS 2008 / ECCC TR08-062",
+    "award": "Seminal FOCS Landmark / Depth-4 Chasm Theorem",
+    "arxiv_id": "ECCC TR08-062",
+    "category": "Theoretical Computer Science & Algebraic Complexity",
+    "significance": "Proved that exponential lower bounds on depth-four arithmetic circuits imply exponential lower bounds for unrestricted-depth circuits, collapsing the VP vs VNP quest to depth 4.",
+    "core_equations": [
+      "\\text{Size}(E) \\le 2^{o(d + d \\log(n/d))}",
+      "\\text{Det}(X) = \\sum_{\\sigma \\in S_n} \\operatorname{sgn}(\\sigma) \\prod_{i=1}^n X_{i, \\sigma(i)} \\quad (\\text{VP})",
+      "\\text{Perm}(X) = \\sum_{\\sigma \\in S_n} \\prod_{i=1}^n X_{i, \\sigma(i)} \\quad (\\text{VNP-Complete})"
+    ]
   }
 ]

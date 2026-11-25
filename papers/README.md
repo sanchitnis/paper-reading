@@ -1,13 +1,14 @@
-# The Foundation & Award-Winning Machine Learning Papers Catalog
+# The Foundation & Award-Winning Machine Learning & Complexity Papers Catalog
 
-> **Master Explainer**: For an overarching architectural synthesis connecting all 16 papers along 6 intellectual lineages with comparative matrices and future extension protocols, read the **[Master Top-Level Explainer](../MASTER_EXPLAINER.md)** or open the **[Master Obsidian Vault](../vaults/00_master_vault/00%20Master%20Index.md)**.
+> **Master Explainer**: For an overarching architectural synthesis connecting all 18 papers along historical lineages with comparative matrices and future extension protocols, read the **[Master Top-Level Explainer](../MASTER_EXPLAINER.md)** or open the **[Master Obsidian Vault](../vaults/00_master_vault/00%20Master%20Index.md)**.
 
 ---
 
-## The Master Catalog (16 Seminal & Top-Venue Best Papers)
+## The Master Catalog (18 Seminal & Top-Venue Best Papers)
 
 | # | Paper Title | Venue & Award | Core Breakthrough | Vault & Study Assets |
 | :--- | :--- | :--- | :--- | :--- |
+| **00** | [VP ≠ VNP over Every Field](00_vp_vs_vnp_valiant.md) | Formal Math Preprint | Claims superpolynomial lower bounds for matrix permanent via geometric dichotomy on tensor price metrics. | [Vault](../vaults/00_vp_vs_vnp_valiant-vault/00%20Index.md) &bull; [Report](../outputs/00_vp_vs_vnp_valiant/EXPLAINER_REPORT.md) &bull; [Audio](../outputs/00_vp_vs_vnp_valiant/AUDIO_OVERVIEW_SCRIPT.md) |
 | **01** | [Attention Is All You Need](01_attention_is_all_you_need.md) | NeurIPS 2017 Landmark | Dispensed with recurrence/convolutions; introduced pure Multi-Head Self-Attention. | [Vault](../vaults/01_attention_is_all_you_need-vault/00%20Index.md) &bull; [Report](../outputs/01_attention_is_all_you_need/EXPLAINER_REPORT.md) &bull; [Audio](../outputs/01_attention_is_all_you_need/AUDIO_OVERVIEW_SCRIPT.md) |
 | **02** | [Deep Residual Learning (ResNet)](02_deep_residual_learning_resnet.md) | **CVPR 2016 Best Paper** | Identity skip connections ($y = \mathcal{F}(x) + x$), overcoming vanishing gradients. | [Vault](../vaults/02_deep_residual_learning_resnet-vault/00%20Index.md) &bull; [Report](../outputs/02_deep_residual_learning_resnet/EXPLAINER_REPORT.md) &bull; [Audio](../outputs/02_deep_residual_learning_resnet/AUDIO_OVERVIEW_SCRIPT.md) |
 | **03** | [BERT: Bidirectional Transformers](03_bert_bidirectional_transformers.md) | **NAACL 2019 Best Paper** | Masked Language Modeling (MLM) and deep bidirectional pre-training for NLU transfer. | [Vault](../vaults/03_bert_bidirectional_transformers-vault/00%20Index.md) &bull; [Report](../outputs/03_bert_bidirectional_transformers/EXPLAINER_REPORT.md) &bull; [Audio](../outputs/03_bert_bidirectional_transformers/AUDIO_OVERVIEW_SCRIPT.md) |
@@ -24,6 +25,7 @@
 | **14** | [Swin Transformer](14_swin_transformer_iccv2021_best.md) | **ICCV 2021 Marr Prize (Best)** | Hierarchical vision representation with linear computational complexity via Shifted Windows. | [Vault](../vaults/14_swin_transformer_iccv2021_best-vault/00%20Index.md) &bull; [Report](../outputs/14_swin_transformer_iccv2021_best/EXPLAINER_REPORT.md) &bull; [Audio](../outputs/14_swin_transformer_iccv2021_best/AUDIO_OVERVIEW_SCRIPT.md) |
 | **15** | [Are Emergent Abilities a Mirage?](15_emergent_abilities_mirage_neurips2023_best.md) | **NeurIPS 2023 Outstanding** | Proved that sharp emergent capability jumps are mathematical mirages of non-linear metrics. | [Vault](../vaults/15_emergent_abilities_mirage_neurips2023_best-vault/00%20Index.md) &bull; [Report](../outputs/15_emergent_abilities_mirage_neurips2023_best/EXPLAINER_REPORT.md) &bull; [Audio](../outputs/15_emergent_abilities_mirage_neurips2023_best/AUDIO_OVERVIEW_SCRIPT.md) |
 | **16** | [Direct Preference Optimization (DPO)](16_dpo_direct_preference_optimization.md) | **NeurIPS 2023 Landmark** | Exact closed-form solution to RLHF; eliminated reward models and PPO reinforcement learning. | [Vault](../vaults/16_dpo_direct_preference_optimization-vault/00%20Index.md) &bull; [Report](../outputs/16_dpo_direct_preference_optimization/EXPLAINER_REPORT.md) &bull; [Audio](../outputs/16_dpo_direct_preference_optimization/AUDIO_OVERVIEW_SCRIPT.md) |
+| **17** | [Arithmetic Circuits: A Chasm at Depth Four](17_agrawal_vinay_chasm_depth_four.md) | **FOCS 2008 Landmark** | Proved that exponential lower bounds for depth-4 circuits imply exponential bounds for unrestricted circuits (VP ≠ VNP). | [Vault](../vaults/17_agrawal_vinay_chasm_depth_four-vault/00%20Index.md) &bull; [Report](../outputs/17_agrawal_vinay_chasm_depth_four/EXPLAINER_REPORT.md) &bull; [Audio](../outputs/17_agrawal_vinay_chasm_depth_four/AUDIO_OVERVIEW_SCRIPT.md) |
 
 ---
 

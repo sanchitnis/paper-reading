@@ -1,0 +1,565 @@
+=== PAGE 1 ===
+Arithmetic Circuits: A Chasm at Depth Four
+Manindra Agrawal1, V Vinay2
+Abstract
+We show that proving exponential lower bounds on depth four
+arithmetic circuits imply exponential lower bounds for unrestricted
+depth arithmetic circuits. In other words, for exponential sized cir-
+cuits additional depth beyond four does not help.
+We then show that a complete black-box derandomization of Iden-
+tity Testing problem for depth four circuits with multiplication gates
+of small fanin implies a nearly complete derandomization of general
+Identity Testing.
+1
+Introduction
+The permanent, by virtue of being complete for #P [16], occupies a central
+position in the study of the complexity of counting problems. Its illustrious
+sibling, the determinant is comparatively easy, being complete for GapL, a
+complexity class housed within NC2 [4, 14, 17].
+The diﬀerence between the computation complexity of the permanent
+and the determinant has been among the most intriguing mathematical
+questions of our times.
+While we know determinant is easy, it has been
+diﬃcult to prove any non-trivial lower bounds against the permanent.
+In reality, a variety of lower bounds have been proved in restricted set-
+tings. Jerrum and Snir [6] show that any monotone circuit computing the
+permanent requires exponential size. Shpilka and Wigderson [13] show that
+any depth three circuit computing the permanent and determinant over the
+rationals requires quadratic size. Grigoriev and Razborov [5] show that any
+depth three arithmetic circuit over a ﬁnite ﬁeld computing the permanent or
+the determinant requires exponential size. Raz [11] shows every multilinear
+forumla computing permanent and determinant requires superpolynomial
+size. All of these proofs already require mathematical intricate machinery.
+Another path to potential lower bounds was discovered by Kabanets
+and Impagliazzo [7]. Ever since they showed a remarkable connection be-
+tween eﬃcient polynomial identity testing (PIT) and arithmetic ciruit lower
+1Indian Institute of Technology, Kanpur. This research was partially supported by J.
+C. Bose fellowship FLW/DST/CS/20060225
+2Geodesic Information Systems Ltd, Bangalore and Chennai Mathematical Institute,
+Chennai
+1
+Electronic Colloquium on Computational Complexity, Report No. 62 (2008)
+ISSN 1433-8092
+
+
+=== PAGE 2 ===
+bounds, identity testing has invited closer scrutiny. For example, Kayal and
+Saxena [9] and Saxena [12] show how certain restricted depth three circuits
+have deterministic polynomial time identity tester.
+Interestingly, a number of the above results are restricted to depth three
+circuits. Why not four or ﬁve or six? The reason, and we show it in this
+paper, is that crossing the chasm at depth four is as hard as the general
+case!
+Depth Four Chasm: If a polynomial P(x1, ..., xn) of degree d with d =
+O(n) can be computed by an arithmetic circuit of size 2o(d+d log n
+d ), it can
+also be computed by a depth four arithmetic circuit of size 2o(d+d log n
+d ) with
+multiplication gates of fanin o(d).
+Notice that polynomial P can trivially be computed by an arithmetic circuit
+of size 2O(d+d log n
+d ) (and depth two). The main result have implications to
+identity testing as well.
+Identity Testing Chasm: If there is a complete black-box derandomiza-
+tion of Identity Testing for depth four circuits with multiplication gates of
+small fanin, then the general Identity Testing problem can be deterministi-
+cally solved in nO(log n) time.
+2
+The Chasm at Depth Four
+It is easy to see that depth four circuits are more powerful than depth three.
+For example, consider the problem of computing determinant over a ﬁnite
+ﬁeld F. We know, by [5], that depth three circuits computing determinant
+over F require exponential size. We now observe that determinant over F
+can be computed by depth four arithmetic circuits of size 2o(n).
+We will start with a problem well know to be computationally equivalent
+to the determinant: matrix powering [3]. Matrix powering is the problem of
+powering an n × n matrix to the nth power, where each entry of the matrix
+is either −1, 0, or 1.
+The proof is simple.
+We break the matrix chain of n matrices into
+√n equal sections. In each section, we can compute the ijth entry of the
+resulting matrix as a sum of products; each product being a multiplication
+of √n entries. It is easy to see that the number of such products, and hence
+the fan-in into the plus gate, is bounded by n
+√n.
+At the end of this phase, we are left with √n matrices; one for each
+section. The ijth entry of the resulting matrix, can similarly be written as
+2
+
+
+=== PAGE 3 ===
+sum of products. Again, a product would be √n long and the sum would
+be over all possible n
+√n products.
+Overall, this results in a depth 4 circuit of size nO(√n) for matrix pow-
+ering, and hence for the determinant.
+Theorem 2.1 The determinant of a n×n matrix with integer n bit entries
+can be computed by depth 4 arithmetic circuits of size nO(√n).
+We now generalize the above observation to any arithmetic circuit of
+subexponential size.
+In this paper, we use subexponential size to mean
+circuits of size 2o(n).
+Let P(x1, . . . , xn) be a polynomial of total degree d. We restrict our
+attention to the case when d = O(n)3. P can be written as sum of at most
+n+d
+d
+
+products. Hence it can always be computed by a depth two circuit of
+size 2O(d+d log n
+d ) because:
+Lemma 2.2 For any n and k(n) such that k(n) = O(n):
+n + k(n)
+k(n)
+
+= 2O(k(n)+k(n) log
+n
+k(n) ).
+Proof.
+If k(n) = Θ(n), then
+n+k(n)
+k(n)
+
+≤2n+k(n) = 2O(k(n)). If k(n) = o(n)
+then, using Stirling’s formula for factorial:
+n + k(n)
+k(n)
+
+= (n + k(n))!
+n!k(n)!
+= O
+ 
+(n + k(n))n+k(n)
+nnk(n)k(n)
+!
+= O
+ 
+1 + k(n)
+n
+n
+·
+
+1 +
+n
+k(n)
+k(n)!
+= O
+ 
+ek(n) ·
+
+2 n
+k(n)
+k(n)!
+= 2O(k(n)+k(n) log
+n
+k(n) ).
+□
+3If the degree is ω(n) then the bounds we get are weaker, and in any case the permanent
+has sublinear degree.
+3
+
+
+=== PAGE 4 ===
+Let P be computed by arithmetic circuit C of size M with M =
+2o(d+d log n
+d ). In [15, 2] it is shown that C can be transformed to a circuit D of
+degree d, size MO(1) and depth O(log d) with multiplication gates of fan-in
+two. We do a careful analysis of the transformation in [2] to obtain a circuit
+D with more structural properties. In particular, we will be interested in
+getting good bounds on the degree of the gates.
+The circuit D we construct will be a strictly alternating circuit of size
+S = MO(1), where M is the size of the original circuit. The addition gates
+of D have unbounded fan-in, while multiplication gates of D have fan-in
+bounded by 6.
+The degree of polynomials computed at each gate satisﬁes the following
+properties:
+• the output gate degree is d,
+• degree of any child of an addition gate is the same as the degree of the
+gate,
+• all children of a multiplication gate have degree at most half of the
+degree of the gate.
+It follows that the depth of the circuit D is at most 2 log d. We now
+indicate how to construct such a circuit.
+Construction
+As a ﬁrst step, we ensure the C is a layered circuit with alternating levels of
+plus and mult gates. Also, we will ensure the fan-in at every multiplication
+gate is 2. Finally, we rearrange the children of the multiplication gate so
+that the degree of the left child is smaller than or equal to the degree of the
+right child.
+A proof tree rooted at gate g of circuit C is a subcircuit obtained as
+follows:
+• start with the subcircuit in C that has gate g at the top and computes
+the polynomial associated with gate g,
+• for every addition gate in this subcircuit, retain only one input to the
+gate while deleting the remaining input lines,
+• for any multiplicate gate in the subcircuit, retain both the inputs to
+it.
+4
+
+
+=== PAGE 5 ===
+It is easy to see that a proof tree rooted at g computes a monomial of the
+polynomial computed at g and this polynomial equals the sum of all such
+monomials.
+For every gate g in C, deﬁne [g] to stand for the polynomial computed
+at gate g. For every pair of gates g and h in C, let [g, h] = P
+T p(T, h)
+where T runs over all the proof trees rooted at g in which h occurs in the
+rightmost path of the tree, and p(T, h) denotes the polynomial computed by
+the proof tree T when gate h is replaced by constant 1. If h does not occur in
+the rightmost path of any proof tree at g then [g, h] is the zero polynomial.
+Gates of circuit D will be [g], [g, h], and [xi] for gates g and h of C and
+variables xi ([xi] represent the variable xi). The connections between these
+gates are described below.
+It is easy to see that [g] = Pn
+i=1[g, xi][xi].
+Also, if g is a plus gate with children g1, . . . , gk, then [g, h] = Pk
+i=1[gi, h].
+Let g be a mult gate with children gL and gR as left and right children
+respectively. Then, if the right most path from g to h has only plus gates
+then [g, h] = [gL]. Otherwise, for a ﬁxed right most path from g to h, there
+must exist a unique intermediate mult gate, say p (with children pL and
+pR) along the right most path connecting g and h such that
+deg(pR) ≤1
+2(deg(g) + deg(h)) ≤deg(p).
+Of course, several right most paths could exist between g and h and we have
+no way of pinpointing only them. Therefore we sum over all possible gates
+p, satisfying the above condition. Then, [g, h] = P
+p[g, p][pL][pR, h].
+Let us now analyze the three terms in the product. Clearly, deg([g]) =
+deg(g) and deg([g, h]) = deg(g) −deg(h).
+1. deg([g, p]) = deg(g) −deg(p) ≤1
+2(deg(g) −deg(h)).
+2. deg([pL]) ≤deg(p) ≤1
+2deg(g). Again,
+deg(pL) ≤deg(pL) + deg(pR) −deg(h) ≤deg(g) −deg(h).
+3. deg([pR, h]) = deg(pR) −deg(h) ≤1
+2(deg(g) −deg(h)).
+We want all the children of [g, h] to be at most half its degree, deg([g, h]).
+The problem is with the child [pL], whose degree need not be bounded
+above by 1
+2deg([g, h]). To get around this, we apply the depth reduction
+algorithm once more to [pL].
+We have [pL] = Pn
+i=1[pL, xi][xi] and pL is
+a plus gate.
+Let pL = P
+j pj
+L with each pj
+L being a mult gate.
+Then,
+[pL, xi] = P
+j[pj
+L, xi]. Applying the above analysis on [pj
+L, xi], we get that
+5
+
+
+=== PAGE 6 ===
+[pj
+L, xi] = P
+q[pj
+L, q][qL][qR, xi] for certain gates q, qL and qR (qL and qR are
+children of q and degree of q satisﬁes the bounds as above). By our analysis,
+for the troublesome left child we now have deg(qL) ≤1
+2pL ≤1
+2deg([g, h]).
+Of course, the bound holds easily for the q and qR as well and therefore, we
+have:
+[g, h] =
+X
+p
+n
+X
+i=1
+X
+j
+X
+q
+[g, p][pj
+L, q][qL][qR, xi][xi][pR, h]
+where p, q satisfy the appropriate degree constraints. This completes the
+description of circuit D.
+By introducing dummy plus gates in the circuit, we can ensure that
+plus and mult gates alternate in D. Thus we get a fan-in 6 multiplication
+circuit D with depth at most 2 log d (of which at most log d layers are of
+mult gates) and size MO(1). All the properties that we had listed of circuit
+D are satisﬁed. Let S be the size of the circuit D, S = MO(1).
+We construct a depth 4 circuit E from D.
+Choose any ℓsuch that
+ℓ≤
+d+d log n
+d
+log S
+and ℓ= ω(1).
+Set t =
+1
+2 log6 ℓ.
+Cut the circuit D in two
+halves: the top one has exactly t mult layers with the last layer being of
+mult gates and the rest of layers belong to the bottom half. Let g1, . . .,
+gk (k ≤S) be the output gates in the bottom layer. We can view the top
+layer as computing a polynomial in k new variables, say, y1, . . ., yk. Let this
+polyonmial be P0(y1, . . . , yk). Let the polynomial computed at the gate gi
+be Pi(x1, . . . , xn) for 1 ≤i ≤k. The polynomial computed by the circuit D
+equals
+P0(P1(x1, . . . , xn), . . . , Pk(x1, . . . , xn)).
+We now obtain an upper bound on the degrees of all these polynomials.
+Since the top layer has exactly t mult layers and each mult gate has fanin
+bounded by 6, the degree of P0 is bounded by 6t. Since the degree goes down
+by at least a factor of two across mult layers, the degree of Pi is bounded
+by
+d
+2t for 1 ≤i ≤k.
+Express each Pi, 0 ≤i ≤k as a sum of products, thus each requiring
+a depth two circuit to compute. Patching together these circuits, we get
+a depth four circuit computing the polynomial computed by D. Let this
+circuit be E. Let us calculate the size of E.
+Lemma 2.3 Polynomial P0 can be written as a sum of at most
+S+6t
+6t
+
+prod-
+ucts, each of fanin ≤6t. Polynomials Pi, 1 ≤i ≤k, can be written as a
+sum of at most
+n+ d
+2t
+d
+2t
+
+products, each of fanin ≤d
+2t .
+6
+
+
+=== PAGE 7 ===
+Proof.
+The number of monomials on n variables and degree k is
+n+k
+k
+
+.
+The lemma now follows from the degree bound on each polynomial and the
+number of variables they are deﬁned on.
+□
+Therefore, the size of circuit E is bounded by
+S + 6t
+6t
+
++ S ·
+n + d
+2t
+d
+2t
+
+=
+S +
+√
+ℓ
+√
+ℓ
+
++ S ·
+n + d
+ℓδ
+d
+ℓδ
+
+(δ = 1
+2 log6 2)
+≤
+(2S)
+√
+ℓ+ S · 2O( d
+ℓδ + d
+ℓδ (log n
+d +log ℓδ)) (since
+√
+ℓ≤S and
+d
+ℓδ = o(n))
+=
+2O(√
+(d+d log n
+d ) log S) + S · 2o(d+d log n
+d )
+=
+2o(d+d log n
+d ).
+Therefore, we have the following theorem.
+Theorem 2.4 Let P(x1, . . . , xn) be a polynomial of degree d = O(n) over
+the ﬁeld F. If there exists an arithmetic circuit of size 2o(d+d log n
+d ) for P then
+there exists a depth 4 arithmetic circuit of size 2o(d+d log n
+d ) for P. Further,
+the fanin of second layer mult gates is bounded by ℓ(n) where ℓis any
+suﬃciently slowly growing function in ω(1) and the fanin of bottom layer
+mult gates is bounded by o(d).
+For multilinear polynomials, we have the following corollary.
+Corollary 2.5 Let P(x1, . . . , xn) be a multilinear polynomial of over the
+ﬁeld F. If there exists an arithmetic circuit of size 2o(n) for P, then there
+exists a depth 4 arithmetic circuit of size 2o(n) for P.
+When the multilinear polynomial is specialized to the permanent we get,
+Corollary 2.6 If every depth 4 arithmetic circuit for Permanent require
+exponential size, then every arithmetic circuit for Permanent requires expo-
+nential size.
+3
+Black-box Derandomization of Identity Testing
+An arithmetic circuit of size n is a low degree circuit if the polynomial
+computed by the circuit has degree ≤n. Low degree Identity Testing is the
+7
+
+
+=== PAGE 8 ===
+problem of testing if a given low degree circuit is zero. In this section, we
+relate the black-box derandomization of depth four Identity Testing to low
+degree Identity Testing. A black-box derandomization of low degree Identity
+Testing problem can be deﬁned as follows (it is a restriction of the deﬁnition
+given in [1] to low degree circuits).
+Deﬁnition 3.1 Let F be a ﬁeld. Let C be a class of low degree arithmetic
+circuits over F. Function f : N 7→(F[y])∗is a s(n)-pseudorandom generator
+against class C of arithmetic circuits if
+• f(n) = (pn
+1(y), pn
+2(y), . . . , pn
+n(y)), pn
+j (y) ∈F[y] is computable in time
+polynomial in s(n) and each pn
+j is of degree bounded by s(n).
+• For any arithmetic circuit C ∈C of size n computing a polynomial of n
+variables over F, C(x1, x2, . . . , xn) = 0 iﬀC(pn
+1(y), pn
+2(y), . . . , pn
+n(y)) =
+0.
+Given an s(n)-pseudorandom generator f against C, one can solve the
+Identity Testing problem (for circuits from the class C) deterministically in
+time sO(1)(n) by simply plugging in the polynomial pn
+j for xj and evaluat-
+ing the resulting (univariate) polynomial. A complete derandomization is
+obtained when s(n) is a polynomial in n. We call such generators optimal
+pseudorandom generators.
+Theorem 3.2 Consider the class of depth 4 arithmetic circuits over F with
+fanin of second layer mult gates bounded by O(ℓ(n)) (for any unbounded
+function ℓ) and the fanin of bottom layer mult gates bounded by O(log n). If
+there is an optimal pseudorandom generator against this class of circuits then
+the low degree Identity Testing problem over F can be solved deterministically
+in time nO(log n).
+Proof.
+Let f be an optimal pseudorandom generator against the class
+of depth 4 circuits over F deﬁned above. It was shown in [1] that such a
+pseudorandom generator yields a family of multilinear polynomials {qm}m≥1
+such that qm is over m variables, is computable in time 2O(m), and requires
+depth 4 circuits of size 2Ω(m), with fanins of second and bottom layer mult
+gates bounded by O(ℓ(2m)) and O(m) respectively, to compute. By The-
+orem 2.4, polynomial qm requires exponential sized circuits (of any depth)
+to compute. Now, we can construct an algorithm that derandomizes low
+degree Identity Testing over F in time nO(log n) using the polynomial q as
+shown by the lemma below.
+□
+8
+
+
+=== PAGE 9 ===
+Lemma 3.3 Let {qm}m≥1 be a multilinear polynomial family over F com-
+putable in exponential time and that cannot be computed by subexponential
+sized arithmetic circuits. Then the low degree Identity Testing problem over
+F can be solved in time nO(log n).
+Proof.
+The proof is along the lines of the proof of Lemma 7.6 in [7]. Let
+C be any circuit over F of size n computing a polynomial of degree ≤n.
+We wish to test if C compute the zero polynomial. Let S1, S2, . . ., Sn be
+subsets of [1, c log n] (for a suitable constant c) such that |Si| = d log n (for
+a suitable d < c) and |Si ∩Sj| ≤log n (for i̸ = j).
+This family of sets
+is the Nisan-Wigderson design [10] and can be eﬃciently constructed. For
+a tuple of variables (x1, x2, . . . , xc log n), denote by (x1, x2, . . . , xc log n)Si the
+tuple obtained by retaining only those variables whose indices occur in Si
+(the variables are always arranged in increasing order of index). Without
+loss of generality, we can assume that C has n inputs z1, . . ., zn. Replace
+zi by pi = qd log n(x1, x2, . . . , xc log n)Si for each i. We now claim that if C is
+zero after substitution then it is zero without substitution as well.
+Suppose not.
+So C(z1, . . . , zn)̸ = 0 and C(p1, . . . , pn) = 0.
+Then
+there must exist an index j such that C(p1, . . . , pj, zj+1, . . . , zn) = 0 and
+C(p1, . . . , pj−1, zj, . . . , zn)̸ = 0. Randomly ﬁx values of variables zj+1, . . .,
+zn as well as xi’s not occuring in the polynomial pj in the last circuit. The
+circuit will still compute a non-zero polynomial with high probability. Fix
+value to the above variables that keep the circuit non-zero. Now replace
+each pi, i < j, by a sum of product form. Since all but log n variables of
+pi are ﬁxed, the size of this form is bounded by n. After replacement, we
+get a circuit of size ≤n2 over variables (x1, . . . , xc log n)Sj and zj that is
+non-zero but becomes zero on substituting zj by pj. Hence zj −pj divides
+the polynomial computed by the new circuit. We now use the multivariate
+polynomial factorization algorithm [8] to compute this factor. The circuit
+computing the factor has size ne for some constant e independent of d. This
+gives us a circuit of size ne+n2 that computes polynomial pj which is qd log n.
+Choosing a suitable d yields a contradiction on the hardness of qd log n.
+Therefore, if C was non-zero to start with, it continues to be non-zero
+even after the substitution. Now express C as sum of products using brute-
+force. Since C after substitution computes a degree O(n log n) polyonmial
+over O(log n) variables, it will have at most nO(log n) terms. This gives an
+nO(log n) time algorithm for testing if C is a zero.
+□
+Theorem 3.2 is suboptimal. It is an interesting open question to improve
+it to obtain polynomial time algorithm instead of nO(log n).
+9
+
+
+=== PAGE 10 ===
+References
+[1] M. Agrawal. Proving lower bounds via pesudo-random generators. In
+Proceedings of the FST&TCS, pages 96–105, 2005.
+[2] E. Allender, J. Jiao, M. Mahajan, and V Vinay.
+Non-commutative
+arithmetic circuits: Depth reduction and size lower bounds. Theoretical
+Computer Science, 209:47–86, 1998.
+[3] S. A. Cook. A Taxonomy of Problems with Fast Parallel Algorithms.
+Information and Control 64(1-3):2–21, 1985.
+[4] C. Damm. DET=L#l. Technical Report Informatik-preprint 8, Fach-
+bereich Informatik der Humboldt Universit¨at zu Berlin, 1991.
+[5] D. Grigoriev and A. Razborov. Exponential lower bounds for depth 3
+arithmetic circuits in algebras of functions over ﬁnite ﬁelds. Applica-
+ble Algebra in Engineering, Communication and Computing, 10(6):467–
+487, 2000.
+[6] M. Jerrum and M. Snir. Some exact complexity results for straight-line
+computations over semirings. J. ACM, 29(3):874–897, 1982.
+[7] Valentine Kabanets and Russell Impagliazzo. Derandomizing polyon-
+mial identity tests means proving circuit lower bounds. Computational
+Complexity, 13:1–46, 2004.
+[8] E. Kaltofen. Factorization of polynomials given by straight-line pro-
+grams. In S. Micali, editor, Randomness and Computation, pages 375–
+412. JAI Press, 1989. Volume 5 of Advances in Computing Research.
+[9] Neeraj Kayal and Nitin Saxena. Polynomial identity testing for depth
+3 circuits. Computational Complexity, 16(2):115–138, 2007.
+[10] N. Nisan and A. Wigderson. Hardness vs. randomness. J. Comput. Sys.
+Sci., 49(2):149–167, 1994.
+[11] Ran Raz. Multi-linear formulas for permanent and determinant and of
+super-polynomial size. In Proceedings of Annual ACM Symposium on
+the Theory of Computing, pages 633–641, 2004.
+[12] Nitin Saxena. Diagonal Circuit Identity Testing and Lower Bounds. In
+Proceedings of the International Colloquium on Automata, Languages
+and Programming, LNCS 5125, pages 60–71, 2008.
+10
+
+
+=== PAGE 11 ===
+[13] A. Shpilka and A. Wigderson. Depth-3 arithmetic formulae over ﬁelds of
+characteristic zero. In Proceedings of the Conference on Computational
+Complexity, pages 79–96, 1999.
+[14] S. Toda. Counting problems computationally equivalent to the deter-
+minant. manuscript, 1991.
+[15] L. Valiant, S. Skyum, S. Berkowitz, and C. Rackoﬀ. Fast parallel com-
+putation of polynnomials using few processors. SIAM Journal on Com-
+puting, 12:641–644, 1983.
+[16] L. G. Valiant. The Complexity of Computing the Permanent. Theor.
+Comput. Sci., 8: 189-201, 1979.
+[17] V Vinay. Counting auxiliary pushdown automata and semi-unbounded
+arithmetic circuits. In IEEE Proceedings of the Structure in Complexity
+Theory Conference, pages 270–284. 1991.
+11
+ 
+http://eccc.hpi-web.de/
+ 
+ECCC
+ISSN 1433-8092
